@@ -1,81 +1,79 @@
 body {
   font-family: 'Tajawal', sans-serif;
   margin: 0;
-  background: url('https://i.postimg.cc/wxfYRPSC/photo-output.jpg') no-repeat center center fixed;
-  background-size: cover;
-  direction: rtl;
+  background-color: #f2f2f2;
   text-align: center;
+  direction: rtl;
 }
 
 .main-header {
   background: rgba(0, 0, 0, 0.6);
   color: white;
-  padding: 30px 15px;
+  padding: 40px 15px;
+  backdrop-filter: blur(5px);
+}
+
+.main-header h1 {
+  font-size: 26px;
 }
 
 .banner {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  color: white;
+  backdrop-filter: blur(5px);
 }
 
 .banner h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  color: #fff;
+  font-size: 22px;
 }
 
-.buttons a {
-  margin: 10px;
-  padding: 12px 20px;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: bold;
-  color: white;
+.buttons {
+  margin-top: 15px;
 }
 
-.call {
-  background: #007bff;
-}
-
-.whatsapp {
-  background: #25d366;
+.icon-button img {
+  width: 40px;
+  margin: 0 10px;
+  vertical-align: middle;
 }
 
 .slider {
   overflow: hidden;
-  height: 180px;
-  position: relative;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.08);
   padding: 10px 0;
+  margin: 20px 0;
+  backdrop-filter: blur(3px);
 }
 
 .slide-track {
   display: flex;
-  animation: scroll 25s ease-in-out infinite alternate;
-  width: max-content;
+  width: fit-content;
+  animation: scroll 20s linear infinite alternate;
 }
 
 .slide-track img {
-  width: 180px;
+  width: 160px;
   height: auto;
-  margin: 0 8px;
+  margin: 0 10px;
   border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-180px * 10)); }
+  100% { transform: translateX(calc(-160px * 10)); }
 }
 
 .services {
   padding: 30px 20px;
   background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
 }
 
 .services h2 {
-  margin-bottom: 15px;
   color: #222;
+  margin-bottom: 20px;
 }
 
 .services ul {
@@ -84,18 +82,25 @@ body {
 }
 
 .services ul li {
-  margin: 8px 0;
+  margin: 10px 0;
   font-size: 16px;
   color: #333;
 }
 
 footer {
-  background: #111;
-  color: white;
-  padding: 20px;
+  background: #000;
+  color: #fff;
+  padding: 25px;
 }
 
 footer a {
   color: #ffcc00;
   text-decoration: none;
+  font-size: 15px;
+}
+
+footer .icon {
+  width: 20px;
+  vertical-align: middle;
+  margin-left: 6px;
 }
