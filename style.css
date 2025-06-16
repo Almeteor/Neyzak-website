@@ -1,58 +1,50 @@
 body {
-  margin: 0;
   font-family: 'Tajawal', sans-serif;
-  background-color: #f8f8f8;
-  text-align: center;
+  margin: 0;
+  background: #f5f5f5;
   direction: rtl;
+  text-align: center;
 }
 
-.top-header {
+.main-header {
   background: rgba(0, 0, 0, 0.6);
   color: white;
-  padding: 40px 20px;
+  padding: 30px 15px;
 }
 
-.top-header h1 {
-  font-size: 2em;
-  margin: 0;
-}
-
-.hero {
+.banner {
   background: rgba(255, 255, 255, 0.85);
   padding: 30px 20px;
-  color: #222;
 }
 
-.hero p {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-  font-weight: bold;
+.banner h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #111;
 }
 
 .buttons a {
-  display: inline-block;
   margin: 10px;
   padding: 12px 20px;
-  border-radius: 30px;
   text-decoration: none;
-  color: white;
+  border-radius: 25px;
   font-weight: bold;
+  color: white;
 }
 
 .call {
-  background-color: #007bff;
+  background: #007bff;
 }
 
 .whatsapp {
-  background-color: #25d366;
+  background: #25d366;
 }
 
 .slider {
   overflow: hidden;
-  position: relative;
   height: 180px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 20px 0;
+  background: #fff;
+  padding: 10px 0;
 }
 
 .slide-track {
@@ -64,9 +56,9 @@ body {
 .slide-track img {
   width: 180px;
   height: auto;
-  margin: 0 10px;
+  margin: 0 8px;
   border-radius: 10px;
-  box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
 @keyframes scroll {
@@ -74,8 +66,29 @@ body {
   100% { transform: translateX(-50%); }
 }
 
+.services {
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.services h2 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services ul li {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+}
+
 footer {
-  background: #333;
+  background: #111;
   color: white;
   padding: 20px;
 }
@@ -83,5 +96,4 @@ footer {
 footer a {
   color: #ffcc00;
   text-decoration: none;
-  font-weight: bold;
 }
