@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>النيزك لتأجير مستلزمات الحفلات والمناسبات والمؤتمرات</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- أزرار الاتصال والواتساب ثابتة بالأعلى -->
+  <div class="top-contact">
+    <a href="tel:0554015378" class="btn-call"><i class="fas fa-phone"></i> 0554015378</a>
+    <a href="https://wa.me/966554015378" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
+  </div>
+
+  <!-- البانر -->
+  <header>
+    <div class="banner-text">
+      <h1>النيزك لتأجير مستلزمات الحفلات والمناسبات والمؤتمرات</h1>
+      <p class="slogan">خدمة فاخرة لكل لحظة مميزة</p>
+    </div>
+    <!-- سلايدر الصور -->
+    <div class="slider">
+      <img src="https://i.postimg.cc/TPNGhwpS/photo-output.png" alt="صورة 1" class="active" />
+      <img src="https://i.postimg.cc/50tBqP9y/photo-output.png" alt="صورة 2" />
+      <img src="https://i.postimg.cc/hv6HTyxR/photo-output.png" alt="صورة 3" />
+    </div>
+  </header>
+
+  <!-- خدماتنا -->
+  <section class="services">
+    <h2>خدماتنا</h2>
+    <ul>
+      <li>تأجير كنب مفرد وثنائي وثلاثي</li>
+      <li>تأجير مكيفات فريون وصحراوية</li>
+      <li>تأجير طاولات دائرية ومستطيلة</li>
+      <li>تأجير جلسات شعبية مرتفعه وأرضيه</li>
+      <li>تأجير كراسي عادي وشفاف</li>
+      <li>تأجير سجاد عادي وملكي</li>
+      <li>تأجير شاشات</li>
+      <li>تأجير ليزرات</li>
+      <li>تأجير ممرات</li>
+      <li>تأجير حواجز</li>
+      <li>تأجير مكبرات صوت بلوتوث و دي جي</li>
+      <li>تأجير خيام بجميع أنواعها</li>
+      <li>قهوجيين وصبابين</li>
+    </ul>
+  </section>
+
+  <!-- معرض الصور -->
+  <section class="gallery">
+    <h2>معرض الصور</h2>
+    <div class="gallery-grid">
+      <img src="https://i.postimg.cc/L6yVCY0h/photo-output.png" alt="صورة 4" />
+      <img src="https://i.postimg.cc/Bb2n8KLp/photo-output.png" alt="صورة 5" />
+      <img src="https://i.postimg.cc/zD2jpHQv/photo-output.jpg" alt="صورة 6" />
+      <img src="https://i.postimg.cc/N0TsCXbc/photo-output.jpg" alt="صورة 7" />
+      <img src="https://i.postimg.cc/FzkD09ND/photo-output.jpg" alt="صورة 8" />
+      <img src="https://i.postimg.cc/jSf2mBdm/photo-output.png" alt="صورة 9" />
+    </div>
+  </section>
+
+  <!-- رابط إنستغرام -->
+  <footer>
+    <a href="https://www.instagram.com/alneyzak/" target="_blank" class="instagram-link">
+      تابعنا على إنستغرام <i class="fab fa-instagram"></i>
+    </a>
+  </footer>
+
+  <script>
+    // سكريبت السلايدر
+    const slides = document.querySelectorAll('.slider img');
+    let current = 0;
+
+    function slider() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }
+    setInterval(slider, 4000);
+  </script>
+</body>
+</html>
