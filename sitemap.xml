@@ -1,7 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://almeteor.github.io/Neyzak-website/</loc>
     <priority>1.0</priority>
   </url>
+
+  <url>
+    <loc>https://almeteor.github.io/Neyzak-website/#kanb</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://almeteor.github.io/Neyzak-website/#ac</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://almeteor.github.io/Neyzak-website/#coffee</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://almeteor.github.io/Neyzak-website/#tables</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://almeteor.github.io/Neyzak-website/#chairs</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://almeteor.github.io/Neyzak-website/#kheyam</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://almeteor.github.io/Neyzak-website/#walkways</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://almeteor.github.io/Neyzak-website/#barriers</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://almeteor.github.io/Neyzak-website/#majlis</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://almeteor.github.io/Neyzak-website/#speakers</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://almeteor.github.io/Neyzak-website/#lasers</loc>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
