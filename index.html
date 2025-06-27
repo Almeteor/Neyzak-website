@@ -3,160 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>النيزك لتأجير مستلزمات الحفلات والمناسبات</title>
-
-  <!-- جوجل سيرش كونسول -->
+  <title>تأجير كنب وخيام وجلسات | النيزك للحفلات - الشرقية، الرياض، جدة</title>
   <meta name="google-site-verification" content="lK-_eTTjn_Y2lShGBaf8jJqfly2iYo-KkNimSh79gCM" />
-  <meta name="description" content="النيزك لتأجير مستلزمات الحفلات والمناسبات - كنب، خيام، جلسات شعبية، ضيافة، مكيفات، كراسي، سجاد وغيرها." />
-  <meta name="keywords" content="تأجير كنب, خيام, جلسات شعبية, ضيافة, مكيفات, كراسي, سجاد, مناسبات, حفلات, الشرقية, الرياض, جدة" />
+  <meta name="description" content="النيزك لتأجير مستلزمات الحفلات والمناسبات - كنب، طاولات، كراسي، خيام، سجاد، مكيفات، سماعات، جلسات شعبية، ضيافة - نخدم الشرقية والرياض وجدة.">
+  <meta name="keywords" content="تأجير كنب, تأجير خيام, تأجير جلسات شعبية, تأجير طاولات, تأجير كراسي, حفلات, مناسبات, النيزك, الشرقية, الرياض, جدة">
   <meta name="robots" content="index, follow" />
-
   <link rel="icon" href="https://i.postimg.cc/QxMDh9df/favicon.png" type="image/png" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-
   <style>
-    /* عام */
+    /* --- Reset and body --- */
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+    }
     body {
       font-family: Arial, sans-serif;
-      background: url('https://i.postimg.cc/K8zK1v2T/IMG-1237.jpg') no-repeat center center fixed;
+      background: #f0f0f0 url('https://i.postimg.cc/K8zK1v2T/IMG-1237.jpg') no-repeat center center fixed;
       background-size: cover;
-      margin: 0; padding: 0;
       direction: rtl;
       min-height: 100vh;
-      color: #333;
+      padding-right: 240px; /* Space for sidebar */
       position: relative;
     }
     body::before {
       content: "";
       position: fixed;
-      inset: 0;
-      background: rgba(255, 255, 255, 0.65);
-      z-index: -1;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.6);
       pointer-events: none;
+      z-index: -1;
     }
-    /* القائمة الجانبية */
-    .menu-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      font-size: 28px;
-      cursor: pointer;
-      z-index: 1001;
-      background: #1976d2;
-      color: white;
-      padding: 10px 14px;
-      border-radius: 5px;
-      user-select: none;
-    }
-    .side-menu {
+
+    /* --- Sidebar --- */
+    nav.sidebar {
       position: fixed;
       top: 0;
-      right: -260px;
-      width: 240px;
-      height: 100%;
-      background: #fff;
-      box-shadow: -2px 0 8px rgba(0,0,0,0.2);
-      transition: right 0.3s ease;
-      z-index: 1000;
-      padding: 60px 20px 20px;
-      overflow-y: auto;
-    }
-    .side-menu.active {
       right: 0;
+      width: 240px;
+      height: 100vh;
+      background: #ffffffcc; /* White with slight transparency */
+      box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+      padding: 30px 20px;
+      z-index: 10000;
+      overflow-y: auto;
+      border-left: none; /* إزالة أي خط أبيض أو ظل على اليسار */
     }
-    .side-menu ul {
-      list-style: none;
-      margin: 0; padding: 0;
-    }
-    .side-menu ul li {
-      margin-bottom: 15px;
-    }
-    .side-menu ul li a {
-      text-decoration: none;
+    nav.sidebar h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
       color: #1976d2;
       font-weight: bold;
-      font-size: 16px;
-      display: block;
-    }
-    /* الهيدر */
-    header {
+      user-select: none;
       text-align: center;
-      padding: 30px 20px 10px;
+    }
+    nav.sidebar ul {
+      list-style: none;
+    }
+    nav.sidebar ul li {
+      margin: 12px 0;
+    }
+    nav.sidebar ul li a {
+      color: #1976d2;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav.sidebar ul li a:hover {
+      color: #004a86;
+    }
+
+    /* --- Header --- */
+    header {
+      padding: 40px 20px 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: 20px; /* spacing from sidebar */
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      text-align: center;
       position: relative;
       z-index: 10;
     }
     header h1 {
-      margin-bottom: 5px;
       font-size: 28px;
+      margin-bottom: 5px;
       color: #1976d2;
     }
-    .slogan {
-      color: #555;
+    header .slogan {
+      color: #444;
+      font-size: 16px;
       margin-bottom: 15px;
-      font-size: 18px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+      line-height: 1.5;
     }
     .top-contact {
       margin-top: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-      z-index: 10;
     }
     .top-contact a {
-      padding: 12px 24px;
+      display: inline-block;
+      margin: 0 10px;
+      padding: 12px 25px;
       border-radius: 25px;
       color: white;
       font-weight: bold;
       text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
       font-size: 16px;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-      transition: background 0.3s ease;
-      user-select: none;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
     }
     .btn-call {
-      background: #1976d2;
+      background-color: #1976d2;
     }
     .btn-call:hover {
-      background: #145a9e;
+      background-color: #0f4a8c;
     }
     .btn-whatsapp {
-      background: #25d366;
+      background-color: #25d366;
     }
     .btn-whatsapp:hover {
-      background: #1da851;
+      background-color: #1da851;
     }
-    /* سلايدر الصور */
+
+    /* --- Slider --- */
     .slider-container {
-      width: 100%;
-      overflow: hidden;
-      margin: 30px auto 20px;
       max-width: 900px;
-      position: relative;
-      z-index: 5;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 25px 20px 40px auto;
       background: rgba(255,255,255,0.9);
-      padding: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 10;
     }
     .slider {
       display: flex;
-      animation: slide 30s linear infinite;
+      animation: slide 25s linear infinite;
     }
     .slider img {
       width: 250px;
       height: 150px;
       object-fit: cover;
-      margin-right: 10px;
+      margin: 10px 8px;
       border-radius: 8px;
       flex-shrink: 0;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       transition: transform 0.3s ease;
     }
     .slider img:hover {
@@ -166,210 +157,200 @@
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
-    /* قسم الخدمات */
+
+    /* --- Sections --- */
     section {
-      background: rgba(255,255,255,0.95);
-      margin: 20px auto;
-      padding: 20px;
       max-width: 900px;
+      background: rgba(255, 255, 255, 0.9);
+      margin: 20px 20px 40px auto;
+      padding: 20px 25px;
       border-radius: 10px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.05);
-      direction: rtl;
-      font-family: Arial, sans-serif;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
       color: #333;
+      font-size: 16px;
+      line-height: 1.6;
+      position: relative;
+      z-index: 10;
     }
     section h2 {
-      text-align: center;
       color: #1976d2;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: 700;
       font-size: 24px;
     }
-    section p {
-      line-height: 1.6;
-      font-size: 16px;
+    section.services ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
     }
-    /* قائمة الخدمات */
-    .services article {
-      margin-bottom: 25px;
-    }
-    .services h3 {
-      color: #004d40;
+    section.services ul li {
       margin-bottom: 8px;
-      font-size: 20px;
+      font-weight: bold;
+      font-size: 17px;
+      color: #444;
+      cursor: pointer;
+      transition: color 0.3s ease;
     }
-    .services ul {
-      list-style: disc inside;
-      margin-top: 8px;
-      color: #333;
+    section.services ul li:hover {
+      color: #1976d2;
     }
-    /* معرض الصور */
+
+    /* --- Gallery --- */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
       gap: 12px;
     }
     .gallery-grid img {
       width: 100%;
       height: 140px;
       object-fit: cover;
-      border-radius: 6px;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
       cursor: pointer;
     }
     .gallery-grid img:hover {
       transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 15;
+      position: relative;
     }
-    /* الفوتر */
+
+    /* --- Footer --- */
     footer {
-      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 30px auto;
       background: #004d40;
-      color: #fff;
-      padding: 20px 10px;
+      color: white;
+      text-align: center;
+      padding: 20px 15px;
+      border-radius: 10px;
       font-size: 14px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      user-select: none;
       position: relative;
       z-index: 10;
     }
     footer a {
-      color: #fff;
+      color: #a8ffeb;
       text-decoration: none;
       font-weight: bold;
     }
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* --- Responsive --- */
+    @media (max-width: 992px) {
+      body {
+        padding-right: 0;
+      }
+      nav.sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        background: #1976d2;
+        padding: 15px 10px;
+      }
+      nav.sidebar h3 {
+        color: white;
+        text-align: center;
+      }
+      nav.sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      nav.sidebar ul li {
+        margin: 8px 15px;
+      }
+      nav.sidebar ul li a {
+        color: white;
+        font-size: 15px;
+      }
+      header, section, footer, .slider-container {
+        margin: 20px 10px;
+        max-width: 100%;
+      }
+      .slider img {
+        width: 180px;
+        height: 110px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- زر القائمة الجانبية -->
-  <div class="menu-toggle" onclick="toggleMenu()">☰ القائمة</div>
+<nav class="sidebar" aria-label="القائمة الرئيسية">
+  <h3>القائمة</h3>
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="kanab.html">تأجير كنب</a></li>
+    <li><a href="kheyam.html">تأجير خيام</a></li>
+    <li><a href="ac.html">تأجير مكيفات</a></li>
+    <li><a href="tables.html">تأجير طاولات</a></li>
+    <li><a href="chairs.html">تأجير كراسي</a></li>
+    <li><a href="carpets.html">تأجير سجاد</a></li>
+    <li><a href="speakers.html">تأجير سماعات</a></li>
+    <li><a href="sessions.html">جلسات شعبية</a></li>
+    <li><a href="hospitality.html">الضيافة</a></li>
+  </ul>
+</nav>
 
-  <!-- القائمة الجانبية -->
-  <nav class="side-menu" id="sideMenu">
-    <ul>
-      <li><a href="index.html">الصفحة الرئيسية</a></li>
-      <li><a href="kanab.html">تأجير كنب</a></li>
-      <li><a href="kheyam.html">تأجير خيام</a></li>
-      <li><a href="ac.html">تأجير مكيفات</a></li>
-      <li><a href="tables.html">تأجير طاولات</a></li>
-      <li><a href="chairs.html">تأجير كراسي</a></li>
-      <li><a href="carpets.html">تأجير سجاد</a></li>
-      <li><a href="majlis.html">تأجير جلسات شعبية</a></li>
-      <li><a href="coffee.html">قهوجيين وصبابين</a></li>
-      <li><a href="about.html">من نحن</a></li>
-    </ul>
-  </nav>
-
-  <!-- سكريبت القائمة الجانبية -->
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('sideMenu');
-      menu.classList.toggle('active');
-    }
-  </script>
-
-  <!-- الهيدر -->
-  <header>
-    <h1>النيزك لتأجير مستلزمات الحفلات والمناسبات</h1>
-    <p class="slogan">خدمة فاخرة لكل لحظة مميزة</p>
-    <p class="slogan">
-      نقدم خدماتنا في <strong>المنطقة الشرقية</strong> مثل الدمام، الخبر، الأحساء، الجبيل، القطيف، سيهات، الظهران، بالإضافة إلى <strong>الرياض</strong> و<strong>جدة</strong>.
-      نختص في <em>تأجير كنب للمناسبات</em>، <em>خيام</em>، <em>كراسي شفافة وعادية</em>، <em>جلسات شعبية</em>، <em>سجاد ملكي</em>، <em>مكيفات وسماعات</em>، و<em>ضيافة متميزة</em>.
-    </p>
-    <div class="top-contact">
-      <a href="tel:0554015378" class="btn-call"><i class="fas fa-phone"></i> اتصال مباشر</a>
-      <a href="https://wa.me/966554015378" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
-    </div>
-  </header>
-
-  <!-- سلايدر صور متحركة -->
-  <div class="slider-container" aria-label="صور من أعمالنا">
-    <div class="slider" aria-live="polite" aria-atomic="true">
-      <img src="https://i.postimg.cc/WzjD5RCb/1.jpg" alt="كنب فاخر" />
-      <img src="https://i.postimg.cc/fbq3SLrh/2.jpg" alt="خيام للحفلات" />
-      <img src="https://i.postimg.cc/JzsvWq66/3.jpg" alt="جلسات شعبية مميزة" />
-      <img src="https://i.postimg.cc/L5jrDbHs/4.jpg" alt="سجاد ملكي" />
-      <img src="https://i.postimg.cc/XY5nQd6T/5.jpg" alt="كراسي شفافة" />
-      <img src="https://i.postimg.cc/WzjD5RCb/1.jpg" alt="كنب فاخر" />
-      <img src="https://i.postimg.cc/fbq3SLrh/2.jpg" alt="خيام للحفلات" />
-      <img src="https://i.postimg.cc/JzsvWq66/3.jpg" alt="جلسات شعبية مميزة" />
-    </div>
+<header role="banner">
+  <h1>النيزك لتأجير مستلزمات الحفلات والمناسبات</h1>
+  <p class="slogan">كنب، خيام، جلسات شعبية، مكيفات، ضيافة وأكثر — نخدم الشرقية، الرياض، وجدة</p>
+  <div class="top-contact" role="navigation" aria-label="روابط الاتصال">
+    <a href="tel:0554015378" class="btn-call" aria-label="اتصال مباشر">📞 اتصال</a>
+    <a href="https://wa.me/966554015378" target="_blank" rel="noopener" class="btn-whatsapp" aria-label="محادثة واتساب">💬 واتساب</a>
   </div>
+</header>
 
-  <!-- قسم خدماتنا -->
-  <section class="services" id="services">
-    <h2>خدماتنا</h2>
+<div class="slider-container" aria-label="صور متحركة من الخدمات">
+  <div class="slider" aria-live="polite">
+    <img src="https://i.postimg.cc/SsdQFv4W/kanab1.jpg" alt="كنب فاخر لتأجير الحفلات" />
+    <img src="https://i.postimg.cc/y6Q8G3cg/kheyam1.jpg" alt="خيام راقية للحفلات" />
+    <img src="https://i.postimg.cc/hvjHKRmm/session1.jpg" alt="جلسات شعبية" />
+    <img src="https://i.postimg.cc/GhxKXzzw/ac1.jpg" alt="مكيفات للحفلات" />
+    <img src="https://i.postimg.cc/0QpZCtHk/tables1.jpg" alt="طاولات تأجير" />
+    <img src="https://i.postimg.cc/SsdQFv4W/kanab1.jpg" alt="كنب فاخر لتأجير الحفلات" />
+    <img src="https://i.postimg.cc/y6Q8G3cg/kheyam1.jpg" alt="خيام راقية للحفلات" />
+  </div>
+</div>
 
-    <article>
-      <h3>تأجير كنب</h3>
-      <ul>
-        <li>كنب فاخر ومريح بمختلف الأشكال والألوان.</li>
-        <li>صيانة وتعقيم لجميع قطع الكنب.</li>
-        <li>توصيل وتركيب في موقع الحفل.</li>
-      </ul>
-    </article>
+<section class="services" aria-labelledby="services-title">
+  <h2 id="services-title">خدماتنا</h2>
+  <ul>
+    <li>تأجير كنب فخم ومريح</li>
+    <li>تأجير خيام بجميع الأحجام</li>
+    <li>تأجير جلسات شعبية تقليدية</li>
+    <li>تأجير مكيفات للحفاظ على الراحة</li>
+    <li>تأجير طاولات وكراسي حديثة</li>
+    <li>تأجير سجاد فاخر</li>
+    <li>تأجير سماعات صوتية عالية الجودة</li>
+    <li>خدمة ضيافة مميزة (قهوجيين وصبابين)</li>
+  </ul>
+</section>
 
-    <article>
-      <h3>تأجير خيام</h3>
-      <ul>
-        <li>خيام بأحجام وتصاميم متعددة تناسب جميع المناسبات.</li>
-        <li>تركيب سريع واحترافي.</li>
-        <li>خدمات تنسيق داخلي حسب الطلب.</li>
-      </ul>
-    </article>
+<section aria-label="معرض الصور">
+  <h2>معرض الصور</h2>
+  <div class="gallery-grid">
+    <img src="https://i.postimg.cc/SsdQFv4W/kanab1.jpg" alt="كنب فاخر" />
+    <img src="https://i.postimg.cc/y6Q8G3cg/kheyam1.jpg" alt="خيام" />
+    <img src="https://i.postimg.cc/hvjHKRmm/session1.jpg" alt="جلسات شعبية" />
+    <img src="https://i.postimg.cc/GhxKXzzw/ac1.jpg" alt="مكيفات" />
+    <img src="https://i.postimg.cc/0QpZCtHk/tables1.jpg" alt="طاولات" />
+    <img src="https://i.postimg.cc/SsdQFv4W/kanab1.jpg" alt="كنب فاخر" />
+  </div>
+</section>
 
-    <article>
-      <h3>تأجير مكيفات وسماعات</h3>
-      <ul>
-        <li>مكيفات هواء قوية وفعالة لجميع الأحجام.</li>
-        <li>سماعات صوت عالية الجودة مناسبة للمناسبات.</li>
-        <li>توصيل وتركيب وصيانة مستمرة.</li>
-      </ul>
-    </article>
-
-    <article>
-      <h3>تأجير طاولات وكراسي</h3>
-      <ul>
-        <li>كراسي شفافة وعادية بتصاميم عصرية.</li>
-        <li>طاولات طعام وقهوة بمقاسات متعددة.</li>
-        <li>تنظيف وتعقيم كامل لجميع المعدات.</li>
-      </ul>
-    </article>
-
-    <article>
-      <h3>تأجير جلسات شعبية وسجاد ملكي</h3>
-      <ul>
-        <li>جلسات شعبية راقية بتنسيقات جميلة.</li>
-        <li>سجاد فاخر يناسب جميع الأذواق.</li>
-      </ul>
-    </article>
-
-    <article>
-      <h3>ضيافة (قهوجيين وصبابين)</h3>
-      <ul>
-        <li>خدمة ضيافة مميزة من قهوجيين وصبابين محترفين.</li>
-        <li>تقديم القهوة والشاي والماء مع الحفاظ على النظافة.</li>
-      </ul>
-    </article>
-  </section>
-
-  <!-- معرض الصور -->
-  <section aria-label="معرض صور من أعمالنا" class="gallery">
-    <h2>معرض الصور</h2>
-    <div class="gallery-grid">
-      <img src="https://i.postimg.cc/fbq3SLrh/2.jpg" alt="خيام تأجير" />
-      <img src="https://i.postimg.cc/JzsvWq66/3.jpg" alt="جلسات شعبية" />
-      <img src="https://i.postimg.cc/XY5nQd6T/5.jpg" alt="كراسي شفافة" />
-      <img src="https://i.postimg.cc/WzjD5RCb/1.jpg" alt="كنب فاخر" />
-      <img src="https://i.postimg.cc/L5jrDbHs/4.jpg" alt="سجاد ملكي" />
-      <img src="https://i.postimg.cc/7YCNQ5qH/6.jpg" alt="مكيفات وصوتيات" />
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 النيزك لتأجير مستلزمات الحفلات والمناسبات | <a href="https://wa.me/966554015378" target="_blank" rel="noopener">تواصل معنا عبر واتساب</a></p>
-  </footer>
+<footer>
+  جميع الحقوق محفوظة &copy; النيزك لتأجير مستلزمات الحفلات والمناسبات 2025<br />
+  <a href="https://wa.me/966554015378" target="_blank" rel="noopener">واتساب للطلبات والاستفسار</a>
+</footer>
 
 </body>
 </html>
