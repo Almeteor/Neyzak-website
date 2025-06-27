@@ -6,17 +6,4 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- أضف روابط الصفحات المهمة عندك هنا -->
-  <url>
-    <loc>https://almeteor.github.io/Neyzak-website/about.html</loc>
-    <lastmod>2025-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://almeteor.github.io/Neyzak-website/services.html</loc>
-    <lastmod>2025-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 </urlset>
