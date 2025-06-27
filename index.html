@@ -3,18 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
   <title>تأجير كنب وخيام وجلسات | النيزك للحفلات - الشرقية، الرياض، جدة</title>
-  
+
   <!-- Google Search Console verification -->
   <meta name="google-site-verification" content="lK-_eTTjn_Y2lShGBaf8jJqfly2iYo-KkNimSh79gCM" />
-  
-  <!-- وصف تعريفي للسيو -->
+
+  <!-- Meta SEO -->
   <meta name="description" content="النيزك لتأجير مستلزمات الحفلات والمناسبات - كنب، طاولات، كراسي، خيام، سجاد، مكيفات، سماعات، جلسات شعبية، ضيافة - نخدم الشرقية والرياض وجدة.">
-
-  <meta name="keywords" content="تأجير كنب, تأجير خيام, تأجير جلسات شعبية, تأجير طاولات, تأجير كراسي, حفلات, مناسبات, النيزك, الشرقية, الرياض, جدة">
+  <meta name="keywords" content="تأجير كنب, تأجير خيام, تأجير جلسات شعبية, تأجير طاولات, تأجير كراسي, تأجير سجاد, تأجير مكيفات, تأجير سماعات, قهوجيين وضيافة, تجهيز حفلات, تأجير مستلزمات مناسبات, النيزك, الشرقية, الرياض, جدة">
   <meta name="robots" content="index, follow">
-
   <link rel="icon" href="https://i.postimg.cc/QxMDh9df/favicon.png" type="image/png" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 
@@ -27,6 +24,7 @@
       padding: 0;
       direction: rtl;
     }
+
     body::before {
       content: "";
       position: fixed;
@@ -35,117 +33,60 @@
       pointer-events: none;
       z-index: -1;
     }
+
     .menu-toggle {
       position: fixed;
       top: 20px;
       right: 20px;
-      font-size: 28px;
+      font-size: 26px;
       cursor: pointer;
       z-index: 1000;
       background: #1976d2;
       color: white;
       padding: 10px 14px;
       border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
+
     .side-menu {
       position: fixed;
       top: 0;
-      right: -260px;
-      width: 240px;
+      right: -250px;
+      width: 230px;
       height: 100%;
       background: #ffffff;
       box-shadow: -2px 0 8px rgba(0,0,0,0.2);
       transition: right 0.3s ease;
       z-index: 999;
-      padding: 60px 20px 20px;
+      padding: 70px 20px 20px;
     }
+
     .side-menu.active {
       right: 0;
     }
+
     .side-menu ul {
       list-style: none;
       padding: 0;
       margin: 0;
     }
+
     .side-menu ul li {
       margin-bottom: 15px;
     }
+
     .side-menu ul li a {
       text-decoration: none;
       color: #1976d2;
       font-weight: bold;
       font-size: 16px;
     }
-    main {
-      margin-right: 0; /* سيتم تعديله تلقائي مع القائمة */
-    }
   </style>
 </head>
 <body>
+
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 <nav class="side-menu" id="sideMenu">
-  <ul>
-    <li><a href="index.html">الصفحة الرئيسية</a></li>
-    <li><a href="kanab.html">تأجير كنب</a></li>
-    <li><a href="kheyam.html">تأجير خيام</a></li>
-    <li><a href="ac.html">تأجير مكيفات</a></li>
-    <li><a href="tables.html">تأجير طاولات</a></li>
-    <li><a href="coffee.html">ضيافة وقهوجيين</a></li>
-    <li><a href="about.html">من نحن</a></li>
-  </ul>
-</nav>
-
-<script>
-  function toggleMenu() {
-    var menu = document.getElementById("sideMenu");
-    menu.classList.toggle("active");
-  }
-</script>
-    }
-
-    nav.sidebar {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 220px;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.95);
-      box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      z-index: 1000;
-    }
-    nav.sidebar h3 {
-      font-size: 20px;
-      margin-bottom: 15px;
-      color: #1976d2;
-    }
-    nav.sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
-    nav.sidebar ul li {
-      margin: 10px 0;
-    }
-    nav.sidebar ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    nav.sidebar ul li a:hover {
-      color: #1976d2;
-    }
-
-    /* تعديل بسيط لباقي الصفحة عشان ما تتغطى بالمينيو */
-    main {
-      margin-right: 240px;
-    }
-  </style>
-</head>
-<body>
-
-<nav class="sidebar">
-  <h3>القائمة</h3>
   <ul>
     <li><a href="index.html">الرئيسية</a></li>
     <li><a href="kanab.html">تأجير كنب</a></li>
@@ -154,303 +95,94 @@
     <li><a href="tables.html">تأجير طاولات</a></li>
     <li><a href="chairs.html">تأجير كراسي</a></li>
     <li><a href="carpets.html">تأجير سجاد</a></li>
-    <li><a href="majlis.html">تأجير جلسات شعبية</a></li>
+    <li><a href="majlis.html">جلسات شعبية</a></li>
     <li><a href="coffee.html">قهوجيين وضيافة</a></li>
     <li><a href="about.html">من نحن</a></li>
   </ul>
 </nav>
 
-<!-- باقي محتوى الصفحة يبدأ هنا -->
-<header>
-  <!-- هنا محتوى الهيدر عندك -->
-</header>
-<!-- باقي الصفحة ... -->
-
-</body>
-</html>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f0f0 url('https://i.postimg.cc/K8zK1v2T/IMG-1237.jpg') no-repeat center center fixed;
-      background-size: cover;
-      margin: 0; padding: 0;
-      direction: rtl;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(255, 255, 255, 0.6);
-      pointer-events: none;
-      z-index: -1;
-    }
-    header {
-      text-align: center;
-      padding: 30px 20px 10px;
-      position: relative;
-      z-index: 1;
-    }
-    header h1 { margin-bottom: 5px; }
-    .slogan { color: #333; margin-bottom: 15px; }
-    .top-contact a {
-      margin: 0 10px;
-      padding: 10px 20px;
-      border-radius: 25px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .btn-call { background: #1976d2; }
-    .btn-whatsapp { background: #25d366; }
-    .slider-container {
-      width: 100%; overflow: hidden;
-      margin: 20px 0;
-      position: relative;
-      z-index: 1;
-    }
-    .slider {
-      display: flex;
-      animation: slide 20s ease-in-out infinite alternate;
-    }
-    .slider img {
-      width: 250px; height: 150px;
-      object-fit: cover;
-      margin: 0 5px;
-      border-radius: 8px;
-    }
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    section {
-      background: rgba(255, 255, 255, 0.85);
-      margin: 20px auto;
-      padding: 20px; max-width: 900px;
-      border-radius: 8px;
-      position: relative;
-      z-index: 1;
-    }
-    section h2 { text-align: center; margin-bottom: 15px; }
-    .services li { margin: 6px 0; }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-      gap: 10px;
-    }
-    .gallery-grid img {
-      width: 100%; height: 140px;
-      object-fit: cover; border-radius: 6px;
-    }
-    footer {
-      text-align: center; background: #004d40;
-      color: #fff; padding: 20px 0;
-      position: relative;
-      z-index: 1;
-    }
-    footer a { color: #fff; text-decoration: none; }
-    footer p { font-size: 13px; margin-top: 5px; }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>النيزك لتأجير مستلزمات الحفلات والمناسبات</h1>
-  <p class="slogan">خدمة فاخرة لكل لحظة مميزة</p>
-
-  <p class="slogan">
-    نقدم خدماتنا في <strong>المنطقة الشرقية</strong> مثل الدمام، الخبر، الأحساء، الجبيل، القطيف، سيهات، الظهران، بالإضافة إلى <strong>الرياض</strong> و<strong>جدة</strong>.  
-    نختص في <em>تأجير كنب للمناسبات</em>، <em>خيام</em>، <em>كراسي شفافة وعادية</em>، <em>جلسات شعبية</em>، <em>سجاد ملكي</em>، <em>مكيفات</em>، <em>شاشات</em>، و<em>خدمات الضيافة</em>. نلبي جميع مناسباتكم بحرفية وذوق راقٍ.
+<script>
+  function toggleMenu() {
+    document.getElementById("sideMenu").classList.toggle("active");
+  }
+</script>
+<header style="text-align: center; padding: 30px 20px 10px; position: relative; z-index: 1;">
+  <h1 style="margin-bottom: 5px;">النيزك لتأجير مستلزمات الحفلات والمناسبات</h1>
+  <p class="slogan" style="color: #333; margin-bottom: 15px;">خدمة فاخرة لكل لحظة مميزة</p>
+  <p style="font-size: 15px; color: #444;">
+    نخدم المنطقة الشرقية (الدمام، الخبر، الظهران، الأحساء، الجبيل، القطيف، سيهات) بالإضافة إلى <strong>الرياض</strong> و<strong>جدة</strong>، بتوفير كافة مستلزمات الحفلات والمناسبات من كنب، طاولات، خيام، كراسي، ضيافة، سجاد، ليزرات، مكيفات وغيرها.
   </p>
 
-  <div class="top-contact">
-    <a href="tel:0554015378" class="btn-call"><i class="fas fa-phone"></i> اتصال</a>
-    <a href="https://wa.me/966554015378" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
+  <div class="top-contact" style="margin-top: 20px;">
+    <a href="tel:0554015378" class="btn-call" style="background:#1976d2; margin: 0 10px; padding:10px 20px; border-radius: 25px; color: #fff; text-decoration: none; font-weight: bold;">
+      <i class="fas fa-phone"></i> اتصال
+    </a>
+    <a href="https://wa.me/966554015378" class="btn-whatsapp" style="background:#25d366; margin: 0 10px; padding:10px 20px; border-radius: 25px; color: #fff; text-decoration: none; font-weight: bold;">
+      <i class="fab fa-whatsapp"></i> واتساب
+    </a>
   </div>
 </header>
-<section style="background: rgba(255, 255, 255, 0.9); margin: 20px auto; padding: 20px; max-width: 900px; border-radius: 8px; direction: rtl; font-family: Arial, sans-serif;">
-  <h2 style="text-align: center; color: #1976d2;">عن النيزك لتأجير مستلزمات الحفلات والمناسبات</h2>
-  <p style="font-size: 16px; line-height: 1.6; color: #333;">
-    النيزك لتأجير مستلزمات الحفلات والمناسبات هو الخيار الأمثل لتنظيم حفلاتك ومناسباتك بأفضل جودة وأحدث التصاميم.
-    نقدم مجموعة شاملة من خدمات التأجير تشمل الكنب الفاخر، الطاولات بأنواعها، الكراسي الشفافة والعادية، الخيام بجميع الأحجام،
-    السجاد الملكي، المكيفات، سماعات الصوت، ليزرات الإضاءة، بالإضافة إلى خدمات الضيافة الاحترافية مثل قهوجيين وصبابين.
-    نخدم العملاء في المنطقة الشرقية (الدمام، الخبر، الظهران، الجبيل، الأحساء، القطيف، سيهات)، بالإضافة إلى الرياض وجدة.
-    نحن نلتزم بتقديم خدمات عالية الجودة مع التركيز على سرعة التوصيل والتركيب، ونضمن رضا العملاء في جميع مناسباتهم،
-    سواء كانت حفلات زفاف، مؤتمرات، مناسبات خاصة أو اجتماعات عائلية.
-    تواصل معنا الآن للحصول على أفضل عروض التأجير وخدمة مميزة تليق بمناسباتك.
-  </p>
-</section>
-<div class="slider-container">
-  <div class="slider">
-    <img src="https://i.postimg.cc/L6yVCY0h/photo-output.png" alt="تجهيز كنب وطاولات">
-    <img src="https://i.postimg.cc/Bb2n8KLp/photo-output.png" alt="جلسات فاخرة">
-    <img src="https://i.postimg.cc/zD2jpHQv/photo-output.jpg" alt="خيمة حفلات">
-    <img src="https://i.postimg.cc/N0TsCXbc/photo-output.jpg" alt="مناسبات VIP">
-    <img src="https://i.postimg.cc/FzkD09ND/photo-output.jpg" alt="كراسي شفافة وطاولات">
-    <img src="https://i.postimg.cc/jSf2mBdm/photo-output.png" alt="سجاد ملكي">
-    <img src="https://i.postimg.cc/TPNGhwpS/photo-output.png" alt="طاولات طعام">
-    <img src="https://i.postimg.cc/50tBqP9y/photo-output.png" alt="أعمال تجهيز كاملة">
-    <img src="https://i.postimg.cc/hv6HTyxR/photo-output.png" alt="زينة الحفلات">
-    <img src="https://i.postimg.cc/wxfYRPSC/photo-output.jpg" alt="حفلات خارجية">
-    <img src="https://i.postimg.cc/ZnYwdNVm/photo-output.png" alt="ضيافة كاملة">
+
+<!-- صور متحركة تحت الأزرار مباشرة -->
+<div class="slider-container" style="width: 100%; overflow: hidden; margin: 30px 0 20px; position: relative; z-index: 1;">
+  <div class="slider" style="display: flex; animation: slide 20s ease-in-out infinite alternate;">
+    <img src="https://i.postimg.cc/L6yVCY0h/photo-output.png" alt="تجهيز كنب وطاولات" style="width: 250px; height: 150px; object-fit: cover; margin: 0 5px; border-radius: 8px;">
+    <img src="https://i.postimg.cc/Bb2n8KLp/photo-output.png" alt="جلسات فاخرة" style="width: 250px; height: 150px; object-fit: cover; margin: 0 5px; border-radius: 8px;">
+    <img src="https://i.postimg.cc/zD2jpHQv/photo-output.jpg" alt="خيمة حفلات" style="width: 250px; height: 150px; object-fit: cover; margin: 0 5px; border-radius: 8px;">
+    <img src="https://i.postimg.cc/N0TsCXbc/photo-output.jpg" alt="مناسبات VIP" style="width: 250px; height: 150px; object-fit: cover; margin: 0 5px; border-radius: 8px;">
+    <img src="https://i.postimg.cc/FzkD09ND/photo-output.jpg" alt="كراسي شفافة وطاولات" style="width: 250px; height: 150px; object-fit: cover; margin: 0 5px; border-radius: 8px;">
   </div>
 </div>
 
-<section style="text-align: right; direction: rtl; padding: 20px; font-family: 'Cairo', sans-serif;">
-  <h2>خدمات تأجير شاملة في الشرقية، الرياض وجدة</h2>
-  <p>
-    نقدم في <strong>النيزك لتأجير مستلزمات الحفلات والمناسبات</strong> مجموعة متكاملة من خدمات التأجير في جميع مدن 
-    <strong>المنطقة الشرقية</strong> مثل: الدمام، الخبر، الظهران، الجبيل، القطيف، سيهات، الأحساء، بالإضافة إلى <strong>الرياض</strong> و<strong>جدة</strong>.
-  </p>
-  <p>
-    خدماتنا تشمل: <strong>تأجير كنب للمناسبات</strong>، <strong>تأجير طاولات دائرية ومستطيلة</strong>، <strong>تأجير كراسي شفافة وعادية</strong>، 
-    <strong>تأجير جلسات شعبية</strong>، <strong>تأجير خيام</strong>، <strong>تأجير سجاد ملكي</strong>، <strong>تأجير طاولات قزاز</strong>، 
-    <strong>تأجير مكيفات فريون وصحراوية</strong>، <strong>تأجير سماعات</strong>، <strong>تأجير ممرات</strong>، <strong>تأجير حواجز تنظيم</strong>، 
-    <strong>تأجير ليزرات</strong>، <strong>تأجير شاشات</strong>، بالإضافة إلى <strong>قهوجيين وصبابين</strong>.
-  </p>
-  <p>
-    نخدم جميع أنواع المناسبات: حفلات زواج، مؤتمرات، استقبال ضيوف، مناسبات VIP، تجهيز شركات، معارض، واجتماعات عائلية.  
-    نحرص على جودة الخدمة وسرعة التوصيل وتنسيق يرضي ذوقك.
-  </p>
-  <p>
-    تواصل معنا الآن للحصول على عرض سعر مميز وخدمة فاخرة من فريق <strong>النيزك</strong>.
+<style>
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
+
+<!-- عن النيزك -->
+<section style="background: rgba(255, 255, 255, 0.9); margin: 20px auto; padding: 20px; max-width: 900px; border-radius: 8px; direction: rtl; font-family: Arial, sans-serif;">
+  <h2 style="text-align: center; color: #1976d2;">عن النيزك لتأجير مستلزمات الحفلات والمناسبات</h2>
+  <p style="font-size: 16px; line-height: 1.6; color: #333;">
+    النيزك هو الاسم الأول في تأجير جميع تجهيزات المناسبات والحفلات بأعلى جودة وأفضل خدمة في الشرقية، الرياض وجدة.
+    نتميز بتوفير كنب فخم، خيام، جلسات شعبية، كراسي، طاولات، سجاد، مكيفات، شاشات، ليزرات، قهوجيين وضيافة بأسعار منافسة وخدمة سريعة.
+    جميع تجهيزاتنا نظيفة، مرتبة، وجاهزة للاستخدام الفوري. اتصل بنا الآن واحصل على لمسة فاخرة تليق بحفلتك!
   </p>
 </section>
-
-<section class="services">
-  <h2>خدماتنا</h2>
-
-  <article id="kanb">
-    <h3>تأجير كنب فخم للمناسبات</h3>
-    <p>نوفر كنب مفرد، ثنائي، وثلاثي بتصاميم حديثة وأنيقة تناسب مختلف المناسبات.</p>
-    <ul>
-      <li>راحة وجودة عالية</li>
-      <li>خدمة توصيل وتركيب</li>
-      <li>أحجام متنوعة تناسب كل المساحات</li>
-    </ul>
-    <p>نخدم الشرقية، الرياض، جدة.</p>
-  </article>
-
-  <article id="ac">
-    <h3>تأجير مكيفات فريون وصحراوي</h3>
-    <p>مكيفات فريون داخلية وصحراوية خارجية تناسب كل الأجواء والمواقع.</p>
-    <ul>
-      <li>أداء تبريد ممتاز</li>
-      <li>أحجام متعددة</li>
-      <li>تركيب سريع وصيانة جاهزة</li>
-    </ul>
-    <p>نغطي الشرقية والرياض وجدة.</p>
-  </article>
-
-  <article id="coffee">
-    <h3>قهوجيين وصبابين وضيافة</h3>
-    <p>خدمة ضيافة احترافية للرجال والنساء تناسب جميع المناسبات.</p>
-    <ul>
-      <li>قهوجيين محترفين</li>
-      <li>صبابين بخبرة في تقديم القهوة والشاي</li>
-      <li>زي رسمي وأسلوب راقٍ</li>
-    </ul>
-    <p>نخدم الشرقية والرياض وجدة.</p>
-  </article>
-
-  <article id="tables">
-    <h3>تأجير طاولات دائرية ومستطيلة</h3>
-    <p>نوفر طاولات بجميع المقاسات والأشكال لمناسباتك الداخلية والخارجية.</p>
-    <ul>
-      <li>طاولات طعام وطاولات ضيافة</li>
-      <li>ثبات وجودة عالية</li>
-      <li>تصاميم بيضاء وذهبية وعصرية</li>
-    </ul>
-    <p>متوفر في الشرقية، الرياض، جدة.</p>
-  </article>
-
-  <article id="chairs">
-    <h3>تأجير كراسي شفافة وعادية</h3>
-    <p>كراسي شفافة عصرية، وكراسي عادية مريحة لجميع أنواع المناسبات.</p>
-    <ul>
-      <li>مقاومة ومريحة</li>
-      <li>خيارات ألوان متنوعة</li>
-      <li>توصيل وتركيب سريع</li>
-    </ul>
-  </article>
-
-  <article id="tents">
-    <h3>تأجير خيام</h3>
-    <p>خيام بجميع الأحجام والأشكال تناسب حفلات الزفاف والمناسبات العائلية.</p>
-    <ul>
-      <li>خيام مزينة وعصرية</li>
-      <li>تركيب سريع وأمن</li>
-      <li>خدمة كاملة مع تجهيزات الإضاءة والديكور</li>
-    </ul>
-  </article>
-
-  <article id="carpets">
-    <h3>تأجير سجاد ملكي</h3>
-    <p>سجاد فاخر يضفي لمسة فخامة وأناقة على مناسباتك.</p>
-    <ul>
-      <li>مقاسات متعددة</li>
-      <li>تصاميم ملكية وعصرية</li>
-      <li>نظافة وصيانة مضمونة</li>
-    </ul>
-  </article>
-
-  <article id="sound">
-    <h3>تأجير سماعات ومعدات صوت</h3>
-    <p>أنظمة صوت عالية الجودة للمؤتمرات والحفلات والمناسبات الخارجية.</p>
-    <ul>
-      <li>مكبرات صوت حديثة</li>
-      <li>ميكروفونات سلكية ولاسلكية</li>
-      <li>دعم فني كامل أثناء الحدث</li>
-    </ul>
-  </article>
-
-  <article id="lighting">
-    <h3>تأجير ليزرات وإضاءة</h3>
-    <p>إضاءات مبهرة وليزرات تضفي جوًا خاصًا على مناسباتك.</p>
-    <ul>
-      <li>إضاءات ملونة متحركة</li>
-      <li>أجهزة ليزر آمنة وعالية الأداء</li>
-      <li>تنسيق إضاءة متكامل مع الحدث</li>
-    </ul>
-  </article>
-
-</section>
-<section class="services">
-  <h2>خدماتنا</h2>
-  <ul>
+<section class="services" style="background: rgba(255, 255, 255, 0.95); margin: 20px auto; padding: 20px; max-width: 900px; border-radius: 8px;">
+  <h2 style="text-align: center; color: #1976d2;">خدماتنا</h2>
+  <ul style="columns: 2; padding: 0; list-style: none; text-align: right; font-size: 16px; line-height: 1.8;">
     <li><a href="kanab.html">تأجير كنب</a></li>
     <li><a href="kheyam.html">تأجير خيام</a></li>
-    <li><a href="ac.html">تأجير مكيفات</a></li>
+    <li><a href="majlis.html">تأجير جلسات شعبية</a></li>
     <li><a href="tables.html">تأجير طاولات</a></li>
-    <li><a href="coffee.html">قهوجيين وصبابين</a></li>
-    <ul>
     <li><a href="chairs.html">تأجير كراسي شفافة وعادية</a></li>
     <li><a href="carpets.html">تأجير سجاد ملكي</a></li>
-    <li><a href="majlis.html">تأجير جلسات شعبية</a></li>
-  </ul>
+    <li><a href="ac.html">تأجير مكيفات فريون وصحراوية</a></li>
+    <li><a href="coffee.html">قهوجيين وصبابين وضيافة</a></li>
   </ul>
 </section>
-<section>
-  <h2>معرض صور أعمالنا</h2>
-  <div class="gallery-grid">
-    <img src="https://i.postimg.cc/L6yVCY0h/photo-output.png" alt="كنب وطاولات فاخرة" />
-    <img src="https://i.postimg.cc/Bb2n8KLp/photo-output.png" alt="جلسات فاخرة" />
-    <img src="https://i.postimg.cc/zD2jpHQv/photo-output.jpg" alt="خيمة حفلات" />
-    <img src="https://i.postimg.cc/N0TsCXbc/photo-output.jpg" alt="مناسبات VIP" />
-    <img src="https://i.postimg.cc/FzkD09ND/photo-output.jpg" alt="كراسي وطاولات" />
-    <img src="https://i.postimg.cc/jSf2mBdm/photo-output.png" alt="سجاد ملكي" />
-    <img src="https://i.postimg.cc/TPNGhwpS/photo-output.png" alt="طاولات طعام" />
-    <img src="https://i.postimg.cc/50tBqP9y/photo-output.png" alt="أعمال تجهيز" />
-    <img src="https://i.postimg.cc/hv6HTyxR/photo-output.png" alt="زينة حفلات" />
-    <img src="https://i.postimg.cc/wxfYRPSC/photo-output.jpg" alt="حفلات خارجية" />
-    <img src="https://i.postimg.cc/ZnYwdNVm/photo-output.png" alt="ضيافة كاملة" />
+<section style="background: rgba(255,255,255,0.95); margin: 20px auto; padding: 20px; max-width: 1000px; border-radius: 8px;">
+  <h2 style="text-align: center; color: #1976d2;">معرض صور من أعمالنا</h2>
+  <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 10px;">
+    <img src="https://i.postimg.cc/L6yVCY0h/photo-output.png" alt="كنب وطاولات فاخرة" style="width: 100%; height: 140px; object-fit: cover; border-radius: 6px;">
+    <img src="https://i.postimg.cc/Bb2n8KLp/photo-output.png" alt="جلسات فاخرة" style="width: 100%; height: 140px; object-fit: cover; border-radius: 6px;">
+    <img src="https://i.postimg.cc/zD2jpHQv/photo-output.jpg" alt="خيمة حفلات" style="width: 100%; height: 140px; object-fit: cover; border-radius: 6px;">
+    <img src="https://i.postimg.cc/N0TsCXbc/photo-output.jpg" alt="مناسبات VIP" style="width: 100%; height: 140px; object-fit: cover; border-radius: 6px;">
+    <img src="https://i.postimg.cc/FzkD09ND/photo-output.jpg" alt="كراسي وطاولات" style="width: 100%; height: 140px; object-fit: cover; border-radius: 6px;">
+    <img src="https://i.postimg.cc/jSf2mBdm/photo-output.png" alt="سجاد ملكي" style="width: 100%; height: 140px; object-fit: cover; border-radius: 6px;">
+    <img src="https://i.postimg.cc/TPNGhwpS/photo-output.png" alt="طاولات طعام" style="width: 100%; height: 140px; object-fit: cover; border-radius: 6px;">
+    <img src="https://i.postimg.cc/50tBqP9y/photo-output.png" alt="أعمال تجهيز" style="width: 100%; height: 140px; object-fit: cover; border-radius: 6px;">
+    <img src="https://i.postimg.cc/hv6HTyxR/photo-output.png" alt="زينة حفلات" style="width: 100%; height: 140px; object-fit: cover; border-radius: 6px;">
+    <img src="https://i.postimg.cc/wxfYRPSC/photo-output.jpg" alt="حفلات خارجية" style="width: 100%; height: 140px; object-fit: cover; border-radius: 6px;">
+    <img src="https://i.postimg.cc/ZnYwdNVm/photo-output.png" alt="ضيافة كاملة" style="width: 100%; height: 140px; object-fit: cover; border-radius: 6px;">
   </div>
-
- 
-</script>
-<footer>
+</section>
+<footer style="text-align: center; background: #004d40; color: #fff; padding: 20px 0; font-size: 14px;">
   <p>© 2025 النيزك لتأجير مستلزمات الحفلات والمناسبات. جميع الحقوق محفوظة.</p>
-  <p>للتواصل: <a href="tel:0554015378">0554015378</a> - <a href="https://wa.me/966554015378">واتساب</a></p>
+  <p>للتواصل: 
+    <a href="tel:0554015378" style="color: #fff; text-decoration: underline;">0554015378</a> | 
+    <a href="https://wa.me/966554015378" style="color: #fff; text-decoration: underline;">واتساب</a>
+  </p>
 </footer>
-
-</body>
-</html>
