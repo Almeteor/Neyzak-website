@@ -7,6 +7,7 @@
   <meta name="description" content="تأجير كنب مفرد، ثنائي، وثلاثي بتصاميم حديثة وأنيقة تناسب مناسباتك في الشرقية، الرياض، جدة. نوفر توصيل وتركيب سريع. تواصل معنا الآن." />
   <link rel="icon" href="https://i.postimg.cc/QxMDh9df/favicon.png" type="image/png" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,6 +16,7 @@
       margin: 0; padding: 0;
       direction: rtl;
       color: #333;
+      display: flex;
     }
     body::before {
       content: "";
@@ -23,6 +25,53 @@
       background: rgba(255, 255, 255, 0.6);
       pointer-events: none;
       z-index: -1;
+    }
+    nav.sidebar {
+      width: 220px;
+      background: #1976d2;
+      color: white;
+      padding: 20px;
+      box-sizing: border-box;
+      height: 100vh;
+      position: fixed;
+      top: 0; bottom: 0;
+      right: 0;
+      overflow-y: auto;
+      font-size: 16px;
+      z-index: 1000;
+    }
+    nav.sidebar h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+    nav.sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav.sidebar ul li {
+      margin: 10px 0;
+    }
+    nav.sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    nav.sidebar ul li a:hover {
+      background: #0d47a1;
+    }
+    main.content {
+      margin-right: 240px;
+      padding: 20px;
+      flex-grow: 1;
+    }
+    header, section, footer {
+      max-width: 900px;
+      margin: auto;
     }
     header {
       text-align: center;
@@ -59,7 +108,6 @@
       background: rgba(255, 255, 255, 0.9);
       margin: 15px auto;
       padding: 20px 25px;
-      max-width: 900px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       line-height: 1.7;
@@ -92,6 +140,20 @@
 </head>
 <body>
 
+<nav class="sidebar">
+  <h3>روابط سريعة</h3>
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="kanab.html">تأجير كنب</a></li>
+    <li><a href="kheyam.html">تأجير خيام</a></li>
+    <li><a href="ac.html">تأجير مكيفات</a></li>
+    <li><a href="tables.html">تأجير طاولات</a></li>
+    <li><a href="coffee.html">قهوجيين وصبابين</a></li>
+    <li><a href="about.html">من نحن</a></li>
+  </ul>
+</nav>
+
+<main class="content">
 <header>
   <h1>تأجير كنب فخم للمناسبات</h1>
   <p>النيزك لتأجير مستلزمات الحفلات - الشرقية، الرياض، جدة</p>
@@ -123,6 +185,7 @@
 <footer>
   <p>© جميع الحقوق محفوظة للنيزك 2025</p>
 </footer>
+</main>
 
 </body>
 </html>
