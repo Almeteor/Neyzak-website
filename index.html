@@ -34,6 +34,71 @@
       pointer-events: none;
       z-index: -1;
     }
+    .menu-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 28px;
+      cursor: pointer;
+      z-index: 1000;
+      background: #1976d2;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 5px;
+    }
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -260px;
+      width: 240px;
+      height: 100%;
+      background: #ffffff;
+      box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+      transition: right 0.3s ease;
+      z-index: 999;
+      padding: 60px 20px 20px;
+    }
+    .side-menu.active {
+      right: 0;
+    }
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .side-menu ul li {
+      margin-bottom: 15px;
+    }
+    .side-menu ul li a {
+      text-decoration: none;
+      color: #1976d2;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav class="side-menu" id="sideMenu">
+  <ul>
+    <li><a href="index.html">الصفحة الرئيسية</a></li>
+    <li><a href="kanab.html">تأجير كنب</a></li>
+    <li><a href="kheyam.html">تأجير خيام</a></li>
+    <li><a href="ac.html">تأجير مكيفات</a></li>
+    <li><a href="tables.html">تأجير طاولات</a></li>
+    <li><a href="coffee.html">ضيافة وقهوجيين</a></li>
+    <li><a href="about.html">من نحن</a></li>
+  </ul>
+</nav>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("sideMenu");
+    menu.classList.toggle("active");
+  }
+</script>
+    }
 
     nav.sidebar {
       position: fixed;
