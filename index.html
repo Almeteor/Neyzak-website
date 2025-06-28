@@ -3,114 +3,174 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>النيزك لتأجير مستلزمات الحفلات</title>
+  <title>النيزك لتأجير مستلزمات الحفلات والمناسبات - الشرقية، الرياض، جدة</title>
 
-  <meta name="description" content="تأجير كنب، طاولات، كراسي، خيام، سجاد، مكيفات، ضيافة في الشرقية، الرياض، جدة.">
-  <meta name="keywords" content="تأجير كنب, خيام, جلسات, كراسي, طاولات, النيزك للحفلات, الرياض, جدة, الشرقية">
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="lK-_eTTjn_Y2lShGBaf8jJqfly2iYo-KkNimSh79gCM" />
+  <!-- SEO Description -->
+  <meta name="description" content="النيزك لتأجير كنب وخيام وجلسات ومكيفات وطاولات وكراسي وضيافة للمناسبات. نخدم المنطقة الشرقية والرياض وجدة بخدمة فاخرة وسريعة.">
+  <meta name="keywords" content="تأجير كنب, تأجير خيام, جلسات شعبية, طاولات, كراسي, النيزك, مناسبات, حفلات, الشرقية, الرياض, جدة">
   <meta name="robots" content="index, follow">
 
-  <link rel="icon" href="https://i.postimg.cc/QxMDh9df/favicon.png" type="image/png">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="https://i.postimg.cc/QxMDh9df/favicon.png" type="image/png" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M0WXDFK8T7"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4R6Z4P2KP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-M0WXDFK8T7');
+    gtag('config', 'G-C4R6Z4P2KP');
   </script>
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Cairo', sans-serif;
       background: url('https://i.postimg.cc/K8zK1v2T/IMG-1237.jpg') no-repeat center center fixed;
       background-size: cover;
+      direction: rtl;
     }
     body::before {
       content: "";
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.75);
       z-index: -1;
     }
+
     header {
-      background: #4CAF50;
+      background: #388e3c;
       color: white;
-      padding: 25px 20px 10px;
       text-align: center;
-      position: relative;
+      padding: 25px 10px 15px;
     }
     header h1 {
       margin: 0;
       font-size: 26px;
-      margin-right: 20px; /* تحريك العنوان شوي يمين */
     }
-    .top-contact {
-      margin: 15px 0;
+
+    .top-buttons {
+      margin-top: 10px;
     }
-    .top-contact a {
-      display: inline-block;
+    .top-buttons a {
       margin: 0 8px;
       padding: 10px 18px;
       border-radius: 25px;
-      font-weight: bold;
-      text-decoration: none;
       color: white;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
     }
-    .btn-call { background: #007bff; }
-    .btn-whatsapp { background: #25d366; }
+    .btn-call {
+      background: #1976d2;
+    }
+    .btn-whatsapp {
+      background: #25d366;
+    }
 
     .slider-container {
-      margin: 0 auto 20px;
       overflow: hidden;
-      max-width: 100%;
+      margin: 20px auto;
+      max-width: 95%;
     }
     .slider {
       display: flex;
-      animation: slide 20s linear infinite;
+      animation: slide 25s linear infinite alternate;
     }
     .slider img {
-      width: 220px;
-      height: 130px;
+      width: 240px;
+      height: 150px;
       object-fit: cover;
       margin: 0 5px;
-      border-radius: 6px;
+      border-radius: 8px;
     }
     @keyframes slide {
-      0% {transform: translateX(0);}
-      100% {transform: translateX(-50%);}
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    nav {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 999;
+    }
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+    }
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 220px;
+      height: 100%;
+      background: rgba(255,255,255,0.97);
+      box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+      padding: 20px;
+      transition: right 0.3s ease;
+    }
+    .side-menu.open {
+      right: 0;
+    }
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+    .side-menu li {
+      margin: 15px 0;
+    }
+    .side-menu a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     section {
-      background: rgba(255,255,255,0.9);
-      margin: 15px auto;
-      padding: 20px;
-      max-width: 950px;
+      background: rgba(255, 255, 255, 0.95);
+      margin: 20px auto;
+      padding: 25px;
+      max-width: 900px;
       border-radius: 10px;
       text-align: center;
+    }
+
+    section h2 {
+      color: #388e3c;
+      margin-bottom: 15px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 6px;
     }
 
     footer {
       background: #004d40;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 20px 10px;
       font-size: 14px;
+      margin-top: 20px;
     }
 
-    .service-links ul {
-      list-style: none;
-      padding: 0;
-    }
-    .service-links li {
-      margin: 8px 0;
-    }
-    .service-links a {
-      color: #1976d2;
-      text-decoration: none;
-      font-weight: bold;
+    @media(max-width: 600px){
+      header h1 { font-size: 20px; }
+      .top-buttons a { padding: 8px 14px; font-size: 14px; }
+      .slider img { width: 200px; height: 120px; }
     }
   </style>
 </head>
@@ -118,80 +178,104 @@
 
 <header>
   <h1>النيزك لتأجير مستلزمات الحفلات والمناسبات</h1>
-  <div class="top-contact">
+  <div class="top-buttons">
     <a href="tel:0554015378" class="btn-call"><i class="fas fa-phone"></i> اتصال</a>
     <a href="https://wa.me/966554015378" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
   </div>
 </header>
 
-<div class="slider-container">
-  <div class="slider">
-    <img src="https://i.postimg.cc/L6yVCY0h/photo-output.png" />
-    <img src="https://i.postimg.cc/Bb2n8KLp/photo-output.png" />
-    <img src="https://i.postimg.cc/zD2jpHQv/photo-output.jpg" />
-    <img src="https://i.postimg.cc/N0TsCXbc/photo-output.jpg" />
-    <img src="https://i.postimg.cc/FzkD09ND/photo-output.jpg" />
-    <img src="https://i.postimg.cc/jSf2mBdm/photo-output.png" />
-    <img src="https://i.postimg.cc/TPNGhwpS/photo-output.png" />
-    <img src="https://i.postimg.cc/50tBqP9y/photo-output.png" />
-    <img src="https://i.postimg.cc/hv6HTyxR/photo-output.png" />
-    <img src="https://i.postimg.cc/wxfYRPSC/photo-output.jpg" />
-    <img src="https://i.postimg.cc/ZnYwdNVm/photo-output.png" />
-  </div>
-</div>
-
-<section>
-  <h2>عن النيزك</h2>
-  <p>
-    النيزك يقدم خدمات تأجير كاملة لحفلاتكم بجودة عالية وتشمل: كنب، طاولات، كراسي، خيام، سجاد، مكيفات، ضيافة والمزيد.<br>
-    نخدم المنطقة الشرقية، الرياض، جدة.
-  </p>
-</section>
-
-<section>
-  <h2>خدماتنا</h2>
-  <p>نوفر جميع مستلزمات الحفلات والمناسبات.</p>
-  <div class="service-links">
+<!-- القائمة الجانبية -->
+<nav>
+  <span class="menu-icon" onclick="toggleMenu()">☰</span>
+  <div id="sideMenu" class="side-menu">
     <ul>
-      <li><a href="kanab.html">تأجير كنب</a></li>
-      <li><a href="kheyam.html">تأجير خيام</a></li>
-      <li><a href="ac.html">تأجير مكيفات</a></li>
-      <li><a href="tables.html">تأجير طاولات</a></li>
-      <li><a href="coffee.html">قهوجيين وصبابين</a></li>
+      <li><a href="#services">خدماتنا</a></li>
+      <li><a href="#gallery">معرض الصور</a></li>
+      <li><a href="#about">عن النيزك</a></li>
+      <li><a href="#contact">تواصل معنا</a></li>
+      <li><a href="kanab.html">تفاصيل تأجير الكنب</a></li>
+      <li><a href="kheyam.html">تفاصيل تأجير الخيام</a></li>
+      <li><a href="ac.html">تفاصيل المكيفات</a></li>
+      <li><a href="tables.html">تفاصيل الطاولات</a></li>
+      <li><a href="coffee.html">تفاصيل الضيافة</a></li>
     </ul>
   </div>
-</section>
-<section>
-  <h2>معرض الصور</h2>
+</nav>
+
+<div class="slider-container">
   <div class="slider">
-    <img src="https://i.postimg.cc/L6yVCY0h/photo-output.png" />
-    <img src="https://i.postimg.cc/Bb2n8KLp/photo-output.png" />
-    <img src="https://i.postimg.cc/zD2jpHQv/photo-output.jpg" />
-    <img src="https://i.postimg.cc/N0TsCXbc/photo-output.jpg" />
-    <img src="https://i.postimg.cc/FzkD09ND/photo-output.jpg" />
-    <img src="https://i.postimg.cc/jSf2mBdm/photo-output.png" />
+    <img src="https://i.postimg.cc/L6yVCY0h/photo-output.png" alt="">
+    <img src="https://i.postimg.cc/Bb2n8KLp/photo-output.png" alt="">
+    <img src="https://i.postimg.cc/zD2jpHQv/photo-output.jpg" alt="">
+    <img src="https://i.postimg.cc/N0TsCXbc/photo-output.jpg" alt="">
+    <img src="https://i.postimg.cc/FzkD09ND/photo-output.jpg" alt="">
+    <img src="https://i.postimg.cc/jSf2mBdm/photo-output.png" alt="">
+    <img src="https://i.postimg.cc/TPNGhwpS/photo-output.png" alt="">
+    <img src="https://i.postimg.cc/50tBqP9y/photo-output.png" alt="">
+  </div>
+</div>
+<section id="services">
+  <h2>خدماتنا</h2>
+  <ul>
+    <li><a href="kanab.html">تأجير كنب</a></li>
+    <li><a href="kheyam.html">تأجير خيام</a></li>
+    <li><a href="ac.html">تأجير مكيفات</a></li>
+    <li><a href="tables.html">تأجير طاولات</a></li>
+    <li><a href="coffee.html">قهوجيين وصبابين</a></li>
+  </ul>
+</section>
+
+<section id="gallery">
+  <h2>معرض الصور</h2>
+  <div class="gallery-grid">
+    <img src="https://i.postimg.cc/L6yVCY0h/photo-output.png" alt="">
+    <img src="https://i.postimg.cc/Bb2n8KLp/photo-output.png" alt="">
+    <img src="https://i.postimg.cc/zD2jpHQv/photo-output.jpg" alt="">
+    <img src="https://i.postimg.cc/N0TsCXbc/photo-output.jpg" alt="">
+    <img src="https://i.postimg.cc/FzkD09ND/photo-output.jpg" alt="">
+    <img src="https://i.postimg.cc/jSf2mBdm/photo-output.png" alt="">
+    <img src="https://i.postimg.cc/TPNGhwpS/photo-output.png" alt="">
+    <img src="https://i.postimg.cc/50tBqP9y/photo-output.png" alt="">
   </div>
 </section>
 
-<section>
-  <h2>من نحن</h2>
+<section id="about">
+  <h2>عن النيزك</h2>
   <p>
-    نحن في <strong>النيزك لتأجير مستلزمات الحفلات</strong> نتميز بخبرة واسعة في تقديم خدمات تأجير الكنب والخيام والجلسات والطاولات والكراسي والمكيفات والسجاد والضيافة.
-    هدفنا هو تحويل مناسبتك إلى لحظة لا تُنسى، عبر توفير منتجات عالية الجودة، وخدمة سريعة واحترافية، في كافة أنحاء المنطقة الشرقية، الرياض، وجدة.
-    جميع تجهيزاتنا نظيفة، حديثة، ومنسقة باحتراف. رضا العميل هو غايتنا.
+    النيزك لتأجير مستلزمات الحفلات والمناسبات يقدم خدمات شاملة لتجهيز مناسباتكم بأحدث المعدات وأكثر التصاميم أناقة.
+    نخدم المنطقة الشرقية، الرياض، جدة، ونوفر خدماتنا بسرعة واحترافية.
   </p>
 </section>
 
-<section>
+<section id="contact">
   <h2>تواصل معنا</h2>
-  <p>📞 اتصال مباشر: <a href="tel:0554015378">0554015378</a></p>
-  <p>💬 واتساب سريع: <a href="https://wa.me/966554015378" target="_blank">اضغط هنا</a></p>
-  <p>📍 نخدم: الدمام - الخبر - الأحساء - الجبيل - القطيف - سيهات - الظهران - الرياض - جدة</p>
+  <p>
+    اتصل بنا أو راسلنا عبر واتساب للحصول على استشارة مجانية أو عرض سعر:
+  </p>
+  <p>
+    📞 <a href="tel:0554015378">0554015378</a><br>
+    💬 <a href="https://wa.me/966554015378">واتساب مباشرة</a>
+  </p>
 </section>
 
 <footer>
-  <p>جميع الحقوق محفوظة © 2025 النيزك لتأجير مستلزمات الحفلات والمناسبات</p>
+  <p>© 2025 النيزك لتأجير مستلزمات الحفلات والمناسبات - جميع الحقوق محفوظة</p>
 </footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('sideMenu').classList.toggle('open');
+  }
+</script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P3S99D1234"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P3S99D1234');
+</script>
 
 </body>
 </html>
