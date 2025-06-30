@@ -7,28 +7,41 @@
   <meta name="description" content="تأجير طاولات دائرية ومستطيلة وقزاز لجميع المناسبات مع جودة عالية وتصاميم عصرية. خدمة في الشرقية، الرياض، وجدة." />
   <link rel="icon" href="https://i.postimg.cc/QxMDh9df/favicon.png" type="image/png" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: Arial, sans-serif;
-      background: #f0f0f0 url('https://i.postimg.cc/K8zK1v2T/IMG-1237.jpg') no-repeat center center fixed;
-      background-size: cover;
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       direction: rtl;
       color: #333;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* خلفية فيديو */
+    #video-background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
     body::before {
       content: "";
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
       background: rgba(255, 255, 255, 0.6);
-      pointer-events: none;
       z-index: -1;
     }
+
     header {
       text-align: center;
       padding: 25px 20px 15px;
-      position: relative;
-      z-index: 1;
     }
     header h1 {
       margin-bottom: 10px;
@@ -37,16 +50,15 @@
     .top-contact {
       margin: 20px 0;
       text-align: center;
-      z-index: 1;
     }
     .top-contact a {
-      margin: 0 12px;
-      padding: 12px 28px;
+      margin: 0 10px;
+      padding: 12px 25px;
       border-radius: 30px;
       color: white;
       font-weight: bold;
       text-decoration: none;
-      font-size: 17px;
+      font-size: 16px;
       display: inline-block;
     }
     .btn-call {
@@ -55,11 +67,17 @@
     .btn-whatsapp {
       background: #25d366;
     }
+    .btn-back {
+      background: #444;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
     section {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.92);
       margin: 15px auto;
       padding: 20px 25px;
-      max-width: 900px;
+      max-width: 1000px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       line-height: 1.7;
@@ -74,6 +92,18 @@
       padding: 0;
       list-style-type: disc;
     }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
     footer {
       text-align: center;
       background: #004d40;
@@ -81,16 +111,27 @@
       padding: 18px 0;
       margin-top: 30px;
       font-size: 14px;
-      position: relative;
-      z-index: 1;
     }
     footer a {
       color: #fff;
       text-decoration: none;
     }
+
+    @media (max-width: 600px) {
+      .top-contact a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+      }
+    }
   </style>
 </head>
 <body>
+
+<!-- خلفية فيديو -->
+<video autoplay muted loop id="video-background">
+  <source src="https://www.videvo.net/videvo_files/converted/2016_05/preview/TimeLapse002_Videvo.mov17871.webm" type="video/webm">
+</video>
 
 <header>
   <h1>تأجير طاولات دائرية ومستطيلة وقزاز</h1>
@@ -98,6 +139,7 @@
   <div class="top-contact">
     <a href="tel:0554015378" class="btn-call"><i class="fas fa-phone"></i> اتصال</a>
     <a href="https://wa.me/966554015378" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
+    <a href="index.html" class="btn-back"><i class="fas fa-arrow-right"></i> رجوع للرئيسية</a>
   </div>
 </header>
 
@@ -118,6 +160,17 @@
   <p>
     تواصل معنا الآن للحصول على عرض سعر خاص وخدمة مميزة.
   </p>
+
+  <div class="gallery">
+    <img src="https://i.postimg.cc/Jz8x60nc/IMG-2305.jpg" alt="طاولة">
+    <img src="https://i.postimg.cc/QNkHgd2r/IMG-2306.jpg" alt="طاولة">
+    <img src="https://i.postimg.cc/wT22rHsC/IMG-2315.jpg" alt="طاولة">
+    <img src="https://i.postimg.cc/bN5DrBXG/IMG-2302.jpg" alt="طاولة">
+    <img src="https://i.postimg.cc/7PGbcNJw/bc7ddf79-4ecc-43f5-a09e-72e2d3b5c6f9.jpg" alt="طاولة">
+    <img src="https://i.postimg.cc/BncjpQLF/b4608c72-662b-43ce-8af6-665fa08a9c15.jpg" alt="طاولة">
+    <img src="https://i.postimg.cc/65Vn3NVM/331d7a29-7869-48fb-8359-a29db30df6aa.jpg" alt="طاولة">
+    <img src="https://i.postimg.cc/kg0mhLzd/66b1980d-6b3d-4904-9f93-959fd5744a67.jpg" alt="طاولة">
+  </div>
 </section>
 
 <footer>
