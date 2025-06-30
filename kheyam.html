@@ -10,7 +10,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f0f0f0 url('https://i.postimg.cc/K8zK1v2T/IMG-1237.jpg') no-repeat center center fixed;
+      background: url('https://i.postimg.cc/T38F06HY/tent-bg.jpg') no-repeat center center fixed;
       background-size: cover;
       margin: 0; padding: 0;
       direction: rtl;
@@ -20,15 +20,12 @@
       content: "";
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(255, 255, 255, 0.6);
-      pointer-events: none;
+      background: rgba(255, 255, 255, 0.7);
       z-index: -1;
     }
     header {
       text-align: center;
       padding: 25px 20px 15px;
-      position: relative;
-      z-index: 1;
     }
     header h1 {
       margin-bottom: 10px;
@@ -37,10 +34,9 @@
     .top-contact {
       margin: 20px 0;
       text-align: center;
-      z-index: 1;
     }
     .top-contact a {
-      margin: 0 12px;
+      margin: 0 10px;
       padding: 12px 28px;
       border-radius: 30px;
       color: white;
@@ -55,9 +51,14 @@
     .btn-whatsapp {
       background: #25d366;
     }
+    .btn-back {
+      background: #555;
+      margin-top: 15px;
+      display: inline-block;
+    }
     section {
-      background: rgba(255, 255, 255, 0.9);
-      margin: 15px auto;
+      background: rgba(255, 255, 255, 0.92);
+      margin: 20px auto;
       padding: 20px 25px;
       max-width: 900px;
       border-radius: 10px;
@@ -74,6 +75,23 @@
       padding: 0;
       list-style-type: disc;
     }
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 25px;
+    }
+    .image-gallery img {
+      width: 100%;
+      max-width: 260px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .image-gallery img:hover {
+      transform: scale(1.05);
+    }
     footer {
       text-align: center;
       background: #004d40;
@@ -81,8 +99,6 @@
       padding: 18px 0;
       margin-top: 30px;
       font-size: 14px;
-      position: relative;
-      z-index: 1;
     }
     footer a {
       color: #fff;
@@ -98,26 +114,29 @@
   <div class="top-contact">
     <a href="tel:0554015378" class="btn-call"><i class="fas fa-phone"></i> اتصال</a>
     <a href="https://wa.me/966554015378" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
+    <a href="index.html" class="btn-back"><i class="fas fa-arrow-right"></i> الرجوع للرئيسية</a>
   </div>
 </header>
 
 <section>
   <h2>خيام بأحجام وأشكال متنوعة لجميع المناسبات</h2>
-  <p>
-    نوفر خيام صغيرة وكبيرة بجودة عالية تناسب حفلات الزواج، العزائم، المناسبات العائلية والاحتفالات الرسمية.
-  </p>
+  <p>نوفر خيام صغيرة وكبيرة بجودة عالية تناسب حفلات الزواج، العزائم، المناسبات العائلية والاحتفالات الرسمية.</p>
   <ul>
     <li>خيام ملكية وخيام ضيافة بتصاميم راقية</li>
     <li>تركيب احترافي سريع وآمن</li>
     <li>مقاومة للحرارة والرياح لضمان راحة ضيوفك</li>
     <li>تجهيز كامل مع إضاءة وديكور حسب الطلب</li>
   </ul>
-  <p>
-    نخدم الشرقية (الدمام، الخبر، الجبيل، القطيف، الأحساء)، الرياض، وجدة.
-  </p>
-  <p>
-    اتصل بنا الآن أو راسلنا عبر واتساب لتحصل على أفضل عرض.
-  </p>
+  <p>نخدم الشرقية (الدمام، الخبر، الجبيل، القطيف، الأحساء)، الرياض، وجدة.</p>
+  <p>اتصل بنا الآن أو راسلنا عبر واتساب لتحصل على أفضل عرض.</p>
+
+  <div class="image-gallery">
+    <img src="https://i.postimg.cc/kXS0k2y2/f8ff48b2-e88d-4fdb-861a-839ccb2a71a6.jpg" alt="خيمة 1" />
+    <img src="https://i.postimg.cc/pTTTZfzh/88fde40d-a308-4c0a-bf4f-773e43ef90a1.jpg" alt="خيمة 2" />
+    <img src="https://i.postimg.cc/2yYCtnB7/41dd72b0-a345-482e-a5f6-fd272ca25556.jpg" alt="خيمة 3" />
+    <img src="https://i.postimg.cc/dQhXMh98/9ef32b4f-fed6-4a97-b0ee-bf884a644a9e.jpg" alt="خيمة 4" />
+    <img src="https://i.postimg.cc/yNSg4XWM/582f6ef3-2cfd-4907-a5ff-11b7fbfc9f47.jpg" alt="خيمة 5" />
+  </div>
 </section>
 
 <footer>
