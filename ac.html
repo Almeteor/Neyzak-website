@@ -2,127 +2,133 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>تأجير مكيفات فريون وصحراوي - النيزك</title>
-  <meta name="description" content="تأجير مكيفات فريون داخلية وصحراوية خارجية بأداء تبريد ممتاز لجميع المناسبات. خدمة تغطي الشرقية، الرياض، جدة. اتصل الآن." />
-  <link rel="icon" href="https://i.postimg.cc/QxMDh9df/favicon.png" type="image/png" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تأجير مكيفات فريون وصحراوي</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f0f0f0 url('https://i.postimg.cc/K8zK1v2T/IMG-1237.jpg') no-repeat center center fixed;
+      background: url('https://i.postimg.cc/VkRJyvmd/IMG-20250326-WA0056.jpg') no-repeat center center fixed;
       background-size: cover;
-      margin: 0; padding: 0;
-      direction: rtl;
-      color: #333;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(255, 255, 255, 0.6);
-      pointer-events: none;
-      z-index: -1;
-    }
-    header {
-      text-align: center;
-      padding: 25px 20px 15px;
-      position: relative;
-      z-index: 1;
-    }
-    header h1 {
-      margin-bottom: 10px;
-      color: #1976d2;
-    }
-    .top-contact {
-      margin: 20px 0;
-      text-align: center;
-      z-index: 1;
-    }
-    .top-contact a {
-      margin: 0 12px;
-      padding: 12px 28px;
-      border-radius: 30px;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
       color: white;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 17px;
-      display: inline-block;
+      backdrop-filter: brightness(0.4);
     }
-    .btn-call {
-      background: #1976d2;
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      margin-top: 40px;
     }
-    .btn-whatsapp {
-      background: #25d366;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 32px;
+      color: #ffd700;
     }
-    section {
-      background: rgba(255, 255, 255, 0.9);
-      margin: 15px auto;
-      padding: 20px 25px;
-      max-width: 900px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      line-height: 1.7;
-    }
-    section h2 {
-      color: #1976d2;
-      margin-bottom: 15px;
+
+    p {
+      font-size: 18px;
+      line-height: 2;
       text-align: center;
     }
+
     ul {
-      margin: 10px 0 15px 20px;
-      padding: 0;
-      list-style-type: disc;
+      font-size: 18px;
+      line-height: 2;
+      padding-right: 30px;
     }
-    footer {
-      text-align: center;
-      background: #004d40;
-      color: #fff;
-      padding: 18px 0;
-      margin-top: 30px;
-      font-size: 14px;
-      position: relative;
-      z-index: 1;
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 30px;
     }
-    footer a {
-      color: #fff;
+
+    .button-container a {
       text-decoration: none;
+      color: white;
+      background-color: #28a745;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-container a.call {
+      background-color: #007bff;
+    }
+
+    .button-container a.back {
+      background-color: #6c757d;
+    }
+
+    .button-container a:hover {
+      background-color: #222;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>تأجير مكيفات فريون وصحراوي</h1>
-  <p>النيزك لتأجير مستلزمات الحفلات - الشرقية، الرياض، جدة</p>
-  <div class="top-contact">
-    <a href="tel:0554015378" class="btn-call"><i class="fas fa-phone"></i> اتصال</a>
-    <a href="https://wa.me/966554015378" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
+  <div class="container">
+    <h1>تأجير مكيفات فريون وصحراوي</h1>
+
+    <div class="button-container">
+      <a href="tel:0554015378" class="call">📞 اتصال</a>
+      <a href="https://wa.me/966554015378">💬 واتساب</a>
+      <a href="index.html" class="back">🔙 الرجوع للرئيسية</a>
+    </div>
+
+    <p>
+      نوفر لك في النيزك أفضل حلول التبريد للمناسبات الداخلية والخارجية من خلال مكيفات فريون قوية الأداء،  
+      ومكيفات صحراوية مناسبة للأماكن المفتوحة.  
+      نضمن لك راحة ضيوفك في جميع الأجواء مع خدمة تركيب وصيانة احترافية.
+    </p>
+
+    <ul>
+      <li>أداء تبريد ممتاز يضمن راحة الضيوف</li>
+      <li>أحجام وموديلات متعددة لتناسب كافة الاحتياجات</li>
+      <li>تركيب سريع وفعّال مع فريق فني محترف</li>
+      <li>صيانة جاهزة لضمان عمل المكيفات طوال الفعالية</li>
+    </ul>
+
+    <p>
+      نخدم المنطقة الشرقية (الدمام، الخبر، الظهران، الجبيل، القطيف، الأحساء)، الرياض، وجدة.
+      اتصل بنا الآن أو تواصل معنا عبر واتساب للحصول على عرض خاص.
+    </p>
+
+    <div class="gallery">
+      <img src="https://i.postimg.cc/g0L9hMNx/5efdb91c-9d74-4dcf-a0a5-86cbfc1a9aa4.jpg" alt="مكيف صحراوي 1">
+      <img src="https://i.postimg.cc/DyNBG7Dc/8ab66db7-ab6f-4815-9452-27eb4d32f0ff.jpg" alt="مكيف فريون 2">
+      <img src="https://i.postimg.cc/wBp55MkD/008f5400-9e04-4768-86ea-1e219d6b3ce4.jpg" alt="مكيفات للحفلات">
+      <img src="https://i.postimg.cc/ydWPQdDx/35de5230-0a9c-4a59-b2fd-bea81a8836be.jpg" alt="مكيف في مناسبة">
+    </div>
   </div>
-</header>
-
-<section>
-  <h2>مكيفات فريون داخلية وصحراوية خارجية لجميع الأجواء</h2>
-  <p>
-    نقدم تأجير مكيفات فريون داخلية ومكيفات صحراوية خارجية تناسب جميع أنواع المناسبات في مختلف الأماكن.
-  </p>
-  <ul>
-    <li>أداء تبريد ممتاز يضمن راحة الضيوف</li>
-    <li>أحجام وموديلات متعددة لتناسب كافة الاحتياجات</li>
-    <li>تركيب سريع وفعّال مع فريق فني محترف</li>
-    <li>صيانة جاهزة لضمان عمل المكيفات طوال الفعالية</li>
-  </ul>
-  <p>
-    نخدم المنطقة الشرقية (الدمام، الخبر، الظهران، الجبيل، القطيف، الأحساء)، الرياض، وجدة.
-  </p>
-  <p>
-    اتصل بنا الآن أو تواصل معنا عبر واتساب للحصول على عرض خاص.
-  </p>
-</section>
-
-<footer>
-  <p>© جميع الحقوق محفوظة للنيزك 2025</p>
-</footer>
 
 </body>
 </html>
