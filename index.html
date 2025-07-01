@@ -494,7 +494,19 @@
       servicesLink.setAttribute('aria-expanded', String(!expanded));
       servicesMenu.classList.toggle('open');
     });
-  </script>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.querySelector(".menu");
+    const toggle = document.querySelector(".menu-toggle");
+
+    document.addEventListener("click", function (e) {
+      // إذا القائمة مفتوحة، وتضغط خارجها وخارج الزر، تقفلها
+      if (menu.classList.contains("active") && !menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove("active");
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
