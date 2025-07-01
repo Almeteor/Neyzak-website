@@ -39,6 +39,7 @@
     .button-container {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 15px;
       margin: 30px 0;
     }
@@ -50,10 +51,19 @@
       padding: 12px 25px;
       border-radius: 30px;
       font-size: 16px;
+      transition: background-color 0.3s ease;
     }
 
     .button-container a.call {
       background-color: #007bff;
+    }
+
+    .button-container a.back {
+      background-color: #6c757d;
+    }
+
+    .button-container a:hover {
+      background-color: #222;
     }
 
     .gallery {
@@ -75,20 +85,6 @@
     .gallery img:hover {
       transform: scale(1.05);
     }
-
-    .back-button {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .back-button a {
-      text-decoration: none;
-      color: #fff;
-      background-color: #6c757d;
-      padding: 10px 20px;
-      border-radius: 25px;
-      font-size: 16px;
-    }
   </style>
 </head>
 <body>
@@ -104,6 +100,7 @@
     <div class="button-container">
       <a href="tel:0554015378" class="call">📞 اتصال</a>
       <a href="https://wa.me/966554015378">💬 واتساب</a>
+      <a href="index.html" class="back">🔙 الرجوع للرئيسية</a>
     </div>
 
     <div class="gallery">
@@ -113,10 +110,6 @@
       <img src="https://i.postimg.cc/kGp15t23/5a10ecb8-ca0e-4da5-9cb1-8e5284159191.jpg" alt="جلسة شعبية 4">
       <img src="https://i.postimg.cc/jqMdXqpp/photo-output.png" alt="جلسة شعبية 5">
       <img src="https://i.postimg.cc/RVmyNwp9/IMG-1671.jpg" alt="جلسة شعبية 6">
-    </div>
-
-    <div class="back-button">
-      <a href="index.html">🔙 الرجوع للصفحة الرئيسية</a>
     </div>
   </div>
 
