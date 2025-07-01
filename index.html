@@ -459,48 +459,24 @@
     </div>
   </section>
 
-  <!-- تواصل معنا -->
-  <section id="contact" tabindex="0" aria-labelledby="contact-title" style="max-width: 600px; margin: 40px auto; background: rgba(255, 255, 255, 0.95); padding: 20px; border-radius: 8px;">
-    <h2 id="contact-title" style="color: #2e7d32; text-align: center;">تواصل معنا</h2>
-    <p style="text-align: center; font-size: 1.1rem; color: #444;">للحجز أو الاستفسار، اتصل أو تواصل معنا عبر الواتساب في أي وقت.</p>
-    <div style="display: flex; justify-content: center; gap: 30px; margin-top: 15px;">
-  <a href="tel:0554015378" aria-label="اتصال" onclick="return gtag_report_conversion('tel:0554015378');" style="background: #1565c0; color: white; padding: 12px 25px; border-radius: 25px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 3px 6px rgba(21, 101, 192, 0.7);"><i class="fas fa-phone"></i> اتصال</a>
-  <a href="https://wa.me/966554015378" target="_blank" aria-label="واتساب"
-   onclick="return gtag_report_conversion('https://wa.me/966554015378');"
-   style="background: #25d366; color: white; padding: 12px 25px; border-radius: 25px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 3px 6px rgba(37, 211, 102, 0.7);">
-  <i class="fab fa-whatsapp"></i> واتساب
-</a>
-    </div>
-  </section>
+<!-- تواصل معنا -->
+<section id="contact" tabindex="0" aria-labelledby="contact-title" style="max-width: 600px; margin: 40px auto; background: rgba(255, 255, 255, 0.95); padding: 20px; border-radius: 8px;">
+  <h2 id="contact-title" style="color: #2e7d32; text-align: center;">تواصل معنا</h2>
+  <p style="text-align: center; font-size: 1.1rem; color: #444;">للحجز أو الاستفسار، اتصل أو تواصل معنا عبر الواتساب في أي وقت.</p>
+  <div style="display: flex; justify-content: center; gap: 30px; margin-top: 15px;">
+    <a href="tel:0554015378" aria-label="اتصال" onclick="return gtag_report_conversion('tel:0554015378');" style="background: #1565c0; color: white; padding: 12px 25px; border-radius: 25px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 3px 6px rgba(21, 101, 192, 0.7);">
+      <i class="fas fa-phone"></i> اتصال
+    </a>
+    <a href="https://wa.me/966554015378" target="_blank" aria-label="واتساب" onclick="return gtag_report_conversion('https://wa.me/966554015378');" style="background: #25d366; color: white; padding: 12px 25px; border-radius: 25px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 3px 6px rgba(37, 211, 102, 0.7);">
+      <i class="fab fa-whatsapp"></i> واتساب
+    </a>
+  </div>
+</section>
 
-  <script>
-    // فتح وإغلاق القائمة الجانبية
-    const menuToggle = document.getElementById('menuToggle');
-    const sideMenu = document.getElementById('sideMenu');
-    const servicesMenu = document.getElementById('servicesMenu');
-    const submenu = servicesMenu.querySelector('.submenu');
-    const servicesLink = servicesMenu.querySelector('a');
-
-    menuToggle.addEventListener('click', () => {
-      sideMenu.classList.toggle('open');
-    });
-
-    function closeMenu() {
-      sideMenu.classList.remove('open');
-    }
-
-    // تبديل عرض القائمة الفرعية لخدماتنا
-    servicesLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      const expanded = servicesLink.getAttribute('aria-expanded') === 'true';
-      servicesLink.setAttribute('aria-expanded', String(!expanded));
-      servicesMenu.classList.toggle('open');
-    });
 <script>
   const menuToggle = document.getElementById('menuToggle');
   const sideMenu = document.getElementById('sideMenu');
   const servicesMenu = document.getElementById('servicesMenu');
-  const submenu = servicesMenu.querySelector('.submenu');
   const servicesLink = servicesMenu.querySelector('a');
 
   // زر فتح/إغلاق القائمة الجانبية
@@ -528,7 +504,7 @@
     servicesMenu.classList.toggle('open');
   });
 
-  // دالة تُستخدم عند الضغط على روابط القائمة
+  // دالة تُستخدم عند الضغط على روابط القائمة لإغلاق القائمة
   function closeMenu() {
     sideMenu.classList.remove('open');
   }
