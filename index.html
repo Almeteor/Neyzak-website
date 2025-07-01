@@ -494,13 +494,19 @@
       servicesLink.setAttribute('aria-expanded', String(!expanded));
       servicesMenu.classList.toggle('open');
     });
- <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     const menu = document.querySelector(".menu");
     const toggle = document.querySelector(".menu-toggle");
 
+    // زر يفتح أو يقفل القائمة
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation(); // عشان ما يتقفل بنفس اللحظة
+      menu.classList.toggle("active");
+    });
+
+    // لو ضغطت خارج القائمة، تتقفل
     document.addEventListener("click", function (e) {
-      // إذا القائمة مفتوحة، وتضغط خارجها وخارج الزر، تقفلها
       if (menu.classList.contains("active") && !menu.contains(e.target) && !toggle.contains(e.target)) {
         menu.classList.remove("active");
       }
