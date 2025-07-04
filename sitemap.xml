@@ -1,62 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<url>
-<loc>https://almeteor.github.io/Neyzak-website/</loc>
-<lastmod>2025-07-04T04:47:10+00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>1.0000</priority>
-</url>
-<url>
-<loc>https://almeteor.github.io/Neyzak-website/kanab.html</loc>
-<lastmod>2025-07-04T04:47:10+00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8000</priority>
-</url>
-<url>
-<loc>https://almeteor.github.io/Neyzak-website/tables.html</loc>
-<lastmod>2025-07-04T04:47:10+00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8000</priority>
-</url>
-<url>
-<loc>https://almeteor.github.io/Neyzak-website/chairs.html</loc>
-<lastmod>2025-07-04T04:47:10+00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8000</priority>
-</url>
-<url>
-<loc>https://almeteor.github.io/Neyzak-website/kheyam.html</loc>
-<lastmod>2025-07-04T04:47:10+00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8000</priority>
-</url>
-<url>
-<loc>https://almeteor.github.io/Neyzak-website/carpets.html</loc>
-<lastmod>2025-07-04T04:47:10+00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8000</priority>
-</url>
-<url>
-<loc>https://almeteor.github.io/Neyzak-website/ac.html</loc>
-<lastmod>2025-07-04T04:47:10+00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8000</priority>
-</url>
-<url>
-<loc>https://almeteor.github.io/Neyzak-website/jalsat.html</loc>
-<lastmod>2025-07-04T04:47:10+00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8000</priority>
-</url>
-<url>
-<loc>https://almeteor.github.io/Neyzak-website/coffee.html</loc>
-<lastmod>2025-07-04T04:47:10+00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8000</priority>
-</url>
-<url>
-<loc>https://almeteor.github.io/Neyzak-website/index.html</loc>
-<lastmod>2025-07-04T04:47:10+00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6400</priority>
-</url>
+  <url>
+    <loc>https://almeteor.github.io/Neyzak-website/</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://almeteor.github.io/Neyzak-website/kanab.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
