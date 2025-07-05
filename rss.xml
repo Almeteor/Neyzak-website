@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>تأجير مستلزمات الحفلات والمناسبات - خدماتنا</title>
+    <link>https://www.alabyadh.com/</link>
+    <description>تابع آخر صفحات موقعنا وخدمات التأجير</description>
+    <language>ar</language>
+
+    <item>
+      <title>تأجير كنب</title>
+      <link>https://www.alabyadh.com/kanab.html</link>
+      <description>خدمة تأجير كنب ملكي ومودرن لمناسباتك</description>
+      <pubDate>Sat, 06 Jul 2025 00:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>تأجير طاولات</title>
+      <link>https://www.alabyadh.com/tables.html</link>
+      <description>أنواع مختلفة من الطاولات للتأجير</description>
+      <pubDate>Sat, 06 Jul 2025 00:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>تأجير كراسي</title>
+      <link>https://www.alabyadh.com/chairs.html</link>
+      <description>تأجير كراسي شفافة وعادية للحفلات</description>
+      <pubDate>Sat, 06 Jul 2025 00:00:00 +0300</pubDate>
+    </item>
+
+    <!-- أضف المزيد حسب رغبتك -->
+
+  </channel>
+</rss>
