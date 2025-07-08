@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>تأجير طاولات دائرية ومستطيلة وقزاز - </title>
+  <title>تأجير طاولات دائرية ومستطيلة وقزاز</title>
   <meta name="description" content="تأجير طاولات دائرية ومستطيلة وقزاز لجميع المناسبات مع جودة عالية وتصاميم عصرية. خدمة في الشرقية، الرياض، وجدة." />
   <link rel="icon" href="https://i.postimg.cc/QxMDh9df/favicon.png" type="image/png" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
@@ -20,17 +20,10 @@
       color: #333;
       position: relative;
       z-index: 1;
+      background: url('https://i.postimg.cc/W3y7TP2y/IMG-2310.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
 
-    /* خلفية فيديو */
-    #video-background {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
     body::before {
       content: "";
       position: fixed;
@@ -100,8 +93,16 @@
     }
     .gallery img {
       width: 100%;
+      height: auto;
+      max-height: 250px;
+      object-fit: cover;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
     }
 
     footer {
@@ -111,10 +112,6 @@
       padding: 18px 0;
       margin-top: 30px;
       font-size: 14px;
-    }
-    footer a {
-      color: #fff;
-      text-decoration: none;
     }
 
     @media (max-width: 600px) {
@@ -128,14 +125,9 @@
 </head>
 <body>
 
-<!-- خلفية فيديو -->
-<video autoplay muted loop id="video-background">
-  <source src="https://www.videvo.net/videvo_files/converted/2016_05/preview/TimeLapse002_Videvo.mov17871.webm" type="video/webm">
-</video>
-
 <header>
   <h1>تأجير طاولات دائرية ومستطيلة وقزاز</h1>
-  <p>النيزك لتأجير مستلزمات الحفلات - الشرقية، الرياض، جدة</p>
+  <p>تأجير طاولات ومستلزمات الحفلات في الشرقية، الرياض، جدة</p>
   <div class="top-contact">
     <a href="tel:0554015378" class="btn-call"><i class="fas fa-phone"></i> اتصال</a>
     <a href="https://wa.me/966554015378" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
@@ -162,19 +154,19 @@
   </p>
 
   <div class="gallery">
-    <img src="https://i.postimg.cc/Jz8x60nc/IMG-2305.jpg" alt="طاولة">
-    <img src="https://i.postimg.cc/QNkHgd2r/IMG-2306.jpg" alt="طاولة">
-    <img src="https://i.postimg.cc/wT22rHsC/IMG-2315.jpg" alt="طاولة">
-    <img src="https://i.postimg.cc/bN5DrBXG/IMG-2302.jpg" alt="طاولة">
-    <img src="https://i.postimg.cc/7PGbcNJw/bc7ddf79-4ecc-43f5-a09e-72e2d3b5c6f9.jpg" alt="طاولة">
-    <img src="https://i.postimg.cc/BncjpQLF/b4608c72-662b-43ce-8af6-665fa08a9c15.jpg" alt="طاولة">
-    <img src="https://i.postimg.cc/65Vn3NVM/331d7a29-7869-48fb-8359-a29db30df6aa.jpg" alt="طاولة">
-    <img src="https://i.postimg.cc/kg0mhLzd/66b1980d-6b3d-4904-9f93-959fd5744a67.jpg" alt="طاولة">
+    <img src="https://i.postimg.cc/Jz8x60nc/IMG-2305.jpg" alt="طاولة" loading="lazy" width="300" height="200">
+    <img src="https://i.postimg.cc/QNkHgd2r/IMG-2306.jpg" alt="طاولة" loading="lazy" width="300" height="200">
+    <img src="https://i.postimg.cc/wT22rHsC/IMG-2315.jpg" alt="طاولة" loading="lazy" width="300" height="200">
+    <img src="https://i.postimg.cc/bN5DrBXG/IMG-2302.jpg" alt="طاولة" loading="lazy" width="300" height="200">
+    <img src="https://i.postimg.cc/7PGbcNJw/bc7ddf79-4ecc-43f5-a09e-72e2d3b5c6f9.jpg" alt="طاولة" loading="lazy" width="300" height="200">
+    <img src="https://i.postimg.cc/BncjpQLF/b4608c72-662b-43ce-8af6-665fa08a9c15.jpg" alt="طاولة" loading="lazy" width="300" height="200">
+    <img src="https://i.postimg.cc/65Vn3NVM/331d7a29-7869-48fb-8359-a29db30df6aa.jpg" alt="طاولة" loading="lazy" width="300" height="200">
+    <img src="https://i.postimg.cc/kg0mhLzd/66b1980d-6b3d-4904-9f93-959fd5744a67.jpg" alt="طاولة" loading="lazy" width="300" height="200">
   </div>
 </section>
 
 <footer>
-  <p>© جميع الحقوق محفوظة للنيزك 2025</p>
+  <p>© جميع الحقوق محفوظة 2025</p>
 </footer>
 
 </body>
