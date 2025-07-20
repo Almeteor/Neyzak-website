@@ -29,6 +29,13 @@
     }
   </script>
 
+  <!-- ✅ تحويل من aladyadh.com إلى www.aladyadh.com -->
+<script>
+  if (location.hostname === 'aladyadh.com') {
+    location.href = 'https://www.aladyadh.com' + location.pathname + location.search + location.hash;
+  }
+</script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   ...
   <!-- تحسين الظهور في جوجل -->
