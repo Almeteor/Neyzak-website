@@ -1001,6 +1001,9 @@
   </div>
 </section>
 
+>
+<button id="scrollTopBtn" title="العودة للأعلى">⬆</button>
+	  
 <script>
   const menuToggle = document.getElementById('menuToggle');
   const sideMenu = document.getElementById('sideMenu');
@@ -1050,6 +1053,47 @@
     document.body.appendChild(script2);
   }, { once: true });
 </script>
+
+// ==== كود زر العودة لأعلى ====
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+<style>
+  /* زر العودة لأعلى */
+  #scrollTopBtn {
+    display: none;
+    position: fixed;
+    top: 50%; /* منتصف الشاشة عمودي */
+    left: 10px; /* على يسار الشاشة */
+    transform: translateY(-50%);
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+
+  #scrollTopBtn:hover {
+    background-color: #555;
+  }
+</style>
+	  
 <footer>
   <div style="display: none;">
     تأجير كنب الدمام، تأجير طاولات حفلات، تأجير كراسي شفافة، تاجير شاشات، تاجير كوش، تاجير دفايات، تاجير طاولات استقبال، تاجير ليزرات، تاجير ممرات، تأجير خيام الرياض، تأجير جلسات شعبية جدة، تجهيز مناسبات فخمة، تأجير لوازم حفلات في الشرقية، قهوجي رجال، صبابين مناسبات، حفلات زفاف، تأجير سماعات، طاولات قزاز، حفلات تخرج، تأجير سجاد ملكي، دي جي حفلات، طاولات بوفية، طاولات طعام دائرية، كنب كلاسيكي، طاولات وكراسي الرياض، جلسات أرضية، خيام ملكية، تجهيز عزائم،   
