@@ -27,7 +27,40 @@
       <pubDate>Sat, 06 Jul 2025 00:00:00 +0300</pubDate>
     </item>
 
-    <!-- أضف المزيد إذا احتجت -->
+    <item>
+      <title>تأجير خيام</title>
+      <link>https://www.aladyadh.com/kheyam.html</link>
+      <description>تأجير خيام بجميع انواعة للحفلات</description>
+      <pubDate>Sat, 06 Jul 2025 00:00:00 +0300</pubDate>
+    </item>
+
+   <item>
+      <title>تأجير جلسات</title>
+      <link>https://www.aladyadh.com/jalsat.html</link>
+      <description>تأجير شعبية ومغربي</description>
+      <pubDate>Sat, 06 Jul 2025 00:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>تأجير مكيفات</title>
+      <link>https://www.aladyadh.com/ac.html</link>
+      <description>تأجير مكيفات صحراوي وفريون</description>
+      <pubDate>Sat, 06 Jul 2025 00:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>تأجير شاشات عرض</title>
+      <link>https://www.aladyadh.com/carpets.html</link>
+      <description>تأجير شاشات عرض</description>
+      <pubDate>Sat, 06 Jul 2025 00:00:00 +0300</pubDate>
+    </item>
+
+     <item>
+      <title>تأجير ركن ضيافة</title>
+      <link>https://www.aladyadh.com/coffee.html</link>
+      <description>قهوجيين وصبابين</description>
+      <pubDate>Sat, 06 Jul 2025 00:00:00 +0300</pubDate>
+    </item>
 
   </channel>
 </rss>
