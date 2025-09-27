@@ -54,20 +54,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- ✅ الوصف التعريفي المطلوب لتحسين SEO -->
   <meta name="description" content="تأجير كراسي وطاولات تاجير كنب تاجير كوش تاجير جلسات تاجير طاولات استقبال، تجهيز الحفلات والمناسبات بأفضل الأسعار وجودة عالية. اتصل الآن واحصل على خدمة مميزة تشمل كافة مستلزمات الفعاليات.">
   
-  <!-- ✅ تحويل من http إلى https -->
   <script>
-    if (location.protocol === 'http:') {
-      location.replace(location.href.replace('http:', 'https:'));
-    }
-  </script>
-
-  <!-- ✅ تحويل من aladyadh.com إلى www.aladyadh.com -->
-  <script>
-    if (location.hostname === 'aladyadh.com') {
-      location.href = 'https://www.aladyadh.com' + location.pathname + location.search + location.hash;
-    }
-  </script>
-
+// تحويل لطيف لـ GitHub Pages
+if (window.location.hostname === 'aladyadh.com' || 
+    window.location.protocol === 'http:') {
+    
+    // تأخير بسيط لضمان تحميل الصفحة أولاً
+    setTimeout(function() {
+        var newUrl = 'https://www.aladyadh.com' + window.location.pathname + window.location.search;
+        window.location.replace(newUrl);
+    }, 100);
+}
+</script>
+	
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   <!-- تحسين الظهور في جوجل -->
