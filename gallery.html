@@ -48,9 +48,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            font-weight: bold;
-            color: #fff;
             border-radius: 50%;
             transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -61,31 +58,69 @@
         .contact-buttons a.call {
             background-color: #1E8449;
         }
+        .contact-buttons a img {
+            width: 50px;
+            height: 50px;
+        }
         .contact-buttons a:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
-        /* عنوان الأقسام */
-        h2 {
+        /* قسم الأيقونات */
+        .section-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .section-card:hover {
+            transform: scale(1.05);
+        }
+        .section-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        .section-card .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 15px;
             text-align: center;
-            margin: 40px 0 20px;
-            color: #333;
-            font-size: 28px;
-            font-weight: 700;
-            text-transform: uppercase;
-            border-bottom: 2px solid #FF5733;
-            padding-bottom: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .section-card:hover .overlay {
+            background: rgba(0, 0, 0, 0.8);
         }
 
         /* معرض الصور */
         .gallery {
-            display: grid;
+            display: none;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 15px;
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
+        }
+        .gallery.active {
+            display: grid;
         }
         .gallery img {
             width: 100%;
@@ -99,6 +134,28 @@
         .gallery img:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* زر إغلاق المعرض */
+        .close-gallery {
+            display: none;
+            text-align: center;
+            margin: 20px auto;
+            padding: 15px 30px;
+            background-color: #FF5733;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+            max-width: 200px;
+        }
+        .close-gallery:hover {
+            background-color: #C7001E;
+        }
+        .close-gallery.active {
+            display: block;
         }
 
         /* Lightbox */
@@ -141,13 +198,52 @@
 
     <!-- أزرار التواصل -->
     <div class="contact-buttons">
-        <a href="https://wa.me/966559534118" target="_blank" class="whatsapp">واتساب</a>
-        <a href="tel:0559534118" class="call">اتصال</a>
+        <a href="https://wa.me/966559534118" target="_blank" class="whatsapp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="واتساب">
+        </a>
+        <a href="tel:0559534118" class="call">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Phone_icon.svg" alt="اتصال">
+        </a>
     </div>
 
+    <!-- أيقونات الأقسام -->
+    <div class="section-gallery">
+        <div class="section-card" data-section="kosh">
+            <img src="https://i.postimg.cc/d0QfxH0t/IMG-3066.jpg" alt="الكوش">
+            <div class="overlay">الكوش ومداخل الاستقبال وطاولات الكوكتيل</div>
+        </div>
+        <div class="section-card" data-section="sofas">
+            <img src="https://i.postimg.cc/GhZqwXNx/IMG-3055.jpg" alt="الكنب">
+            <div class="overlay">كنب مفرد وثلاثي</div>
+        </div>
+        <div class="section-card" data-section="tables">
+            <img src="https://i.postimg.cc/pdPrmt4V/c40bae99-ae66-4d61-848a-776846e53140.jpg" alt="الطاولات">
+            <div class="overlay">طاولات وكراسي</div>
+        </div>
+        <div class="section-card" data-section="hospitality">
+            <img src="https://i.postimg.cc/bwsHS41W/4ae02baf-1b7f-4006-b2bf-e0b3a9081e27.jpg" alt="ركن الضيافة">
+            <div class="overlay">ركن الضيافة</div>
+        </div>
+        <div class="section-card" data-section="seating">
+            <img src="https://i.postimg.cc/HkY15sYN/IMG-3033.jpg" alt="الجلسات">
+            <div class="overlay">جلسات شعبية ومغربية</div>
+        </div>
+        <div class="section-card" data-section="tents">
+            <img src="https://i.postimg.cc/yxRkRRDr/IMG-3096.jpg" alt="الخيام">
+            <div class="overlay">خيام</div>
+        </div>
+        <div class="section-card" data-section="barriers">
+            <img src="https://i.postimg.cc/s2PmYBhx/IMG-3089.jpg" alt="الحواجز">
+            <div class="overlay">حواجز وممرات وليزرات وشاشات ومسارح</div>
+        </div>
+    </div>
+
+    <!-- زر إغلاق المعرض -->
+    <a href="#" class="close-gallery">إغلاق المعرض</a>
+
     <!-- قسم صور كوش الأفراح ومداخل الاستقبال وطاولات الكوكتيل -->
-    <h2>صور الكوش ومداخل الاستقبال وطاولات كوكتيل</h2>
-    <div class="gallery">
+    <div class="gallery" id="kosh">
+        <h2>صور الكوش ومداخل الاستقبال وطاولات الكوكتيل</h2>
         <img src="https://i.postimg.cc/d0QfxH0t/IMG-3066.jpg" alt="صورة 1">
         <img src="https://i.postimg.cc/W3hH2drB/IMG-3065.jpg" alt="صورة 2">
         <img src="https://i.postimg.cc/C1X6dwsz/IMG-3064.jpg" alt="صورة 3">
@@ -171,8 +267,8 @@
     </div>
 
     <!-- قسم صور الكنب -->
-    <h2>صور كنب مفرد وثلاثي</h2>
-    <div class="gallery">
+    <div class="gallery" id="sofas">
+        <h2>صور كنب مفرد وثلاثي</h2>
         <img src="https://i.postimg.cc/GhZqwXNx/IMG-3055.jpg" alt="صورة">
         <img src="https://i.postimg.cc/zGr2HdjX/IMG-3037.jpg" alt="صورة">
         <img src="https://i.postimg.cc/0y0WYpWG/be683716-ad38-47dc-a0a0-dc8da79cbb92.jpg" alt="صورة">
@@ -185,8 +281,8 @@
     </div>
 
     <!-- قسم صور طاولات وكراسي -->
-    <h2>صور طاولات وكراسي</h2>
-    <div class="gallery">
+    <div class="gallery" id="tables">
+        <h2>صور طاولات وكراسي</h2>
         <img src="https://i.postimg.cc/pdPrmt4V/c40bae99-ae66-4d61-848a-776846e53140.jpg" alt="صورة">
         <img src="https://i.postimg.cc/cCf6K4xH/IMG-3035.jpg" alt="صورة">
         <img src="https://i.postimg.cc/28FVr699/a89f7420-69cb-475c-a69c-3da37e1bbdb0.jpg" alt="صورة">
@@ -202,8 +298,8 @@
     </div>
 
     <!-- قسم صور ركن الضيافة -->
-    <h2>صور ركن الضيافة</h2>
-    <div class="gallery">
+    <div class="gallery" id="hospitality">
+        <h2>صور ركن الضيافة</h2>
         <img src="https://i.postimg.cc/bwsHS41W/4ae02baf-1b7f-4006-b2bf-e0b3a9081e27.jpg" alt="صورة">
         <img src="https://i.postimg.cc/fLtRxj8w/241b0699-41ee-4e62-823f-4903ea8d565f.jpg" alt="صورة">
         <img src="https://i.postimg.cc/yNJH56cj/3da3cacf-5efb-45cf-9222-e3abcfecbde9.jpg" alt="صورة">
@@ -214,8 +310,8 @@
     </div>
 
     <!-- قسم صور الجلسات -->
-    <h2>صور جلسات شعبية ومغربية</h2>
-    <div class="gallery">
+    <div class="gallery" id="seating">
+        <h2>صور جلسات شعبية ومغربية</h2>
         <img src="https://i.postimg.cc/HkY15sYN/IMG-3033.jpg" alt="صورة">
         <img src="https://i.postimg.cc/2jhsKB3J/60f2dedd-5c0b-4266-8952-2b59a1af5413.jpg" alt="صورة">
         <img src="https://i.postimg.cc/RVTjM57L/IMG-3034.jpg" alt="صورة">
@@ -232,8 +328,8 @@
     </div>
 
     <!-- قسم صور الخيام -->
-    <h2>صور خيام</h2>
-    <div class="gallery">
+    <div class="gallery" id="tents">
+        <h2>صور خيام</h2>
         <img src="https://i.postimg.cc/yxRkRRDr/IMG-3096.jpg" alt="صورة">
         <img src="https://i.postimg.cc/8CCcH9Fv/IMG-3095.jpg" alt="صورة">
         <img src="https://i.postimg.cc/g0BJBsRT/IMG-3094.jpg" alt="صورة">
@@ -244,8 +340,8 @@
     </div>
 
     <!-- قسم صور الحواجز والممرات والليزرات والشاشات وشاشات العرض والمسارح -->
-    <h2>صور حواجز وممرات وليزرات وشاشات ومسارح</h2>
-    <div class="gallery">
+    <div class="gallery" id="barriers">
+        <h2>صور حواجز وممرات وليزرات وشاشات ومسارح</h2>
         <img src="https://i.postimg.cc/s2PmYBhx/IMG-3089.jpg" alt="صورة">
         <img src="https://i.postimg.cc/0N5nCkdC/IMG-3088.jpg" alt="صورة">
         <img src="https://i.postimg.cc/Vvtd8SB4/IMG-3363.jpg" alt="صورة">
@@ -274,19 +370,44 @@
     </div>
 
     <script>
-        const gallery = document.querySelectorAll('.gallery img');
+        const sectionCards = document.querySelectorAll('.section-card');
+        const galleries = document.querySelectorAll('.gallery');
+        const closeGallery = document.querySelector('.close-gallery');
+        const sectionGallery = document.querySelector('.section-gallery');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
-        const close = document.querySelector('.close');
+        const closeLightbox = document.querySelector('.close');
 
-        gallery.forEach(img => {
-            img.addEventListener('click', () => {
-                lightbox.style.display = 'flex';
-                lightboxImg.src = img.src;
+        // عرض معرض القسم عند الضغط على الأيقونة
+        sectionCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const section = card.getAttribute('data-section');
+                galleries.forEach(gallery => gallery.classList.remove('active'));
+                document.getElementById(section).classList.add('active');
+                sectionGallery.style.display = 'none';
+                closeGallery.classList.add('active');
             });
         });
 
-        close.addEventListener('click', () => {
+        // إغلاق المعرض وعودة للأيقونات
+        closeGallery.addEventListener('click', (e) => {
+            e.preventDefault();
+            galleries.forEach(gallery => gallery.classList.remove('active'));
+            sectionGallery.style.display = 'grid';
+            closeGallery.classList.remove('active');
+        });
+
+        // Lightbox لعرض الصور
+        galleries.forEach(gallery => {
+            gallery.querySelectorAll('img').forEach(img => {
+                img.addEventListener('click', () => {
+                    lightbox.style.display = 'flex';
+                    lightboxImg.src = img.src;
+                });
+            });
+        });
+
+        closeLightbox.addEventListener('click', () => {
             lightbox.style.display = 'none';
         });
 
