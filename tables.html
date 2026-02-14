@@ -232,6 +232,80 @@
       line-height: 1.8;
     }
 
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      direction: rtl;
+      color: #2c3e50;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      background-attachment: fixed;
+      line-height: 1.8;
+    }
+
+    /* ✅ هنا تحت body مباشرة - أضف الكود الجديد */
+    .logo-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 15px;
+      margin-bottom: 20px;
+      padding-right: 20px;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .brand-name {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .brand-subtitle {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.9);
+      margin-top: 3px;
+    }
+
+    /* ✅ تحسين الهيدر مع اللوجو - عدّل هذا القسم */
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 20px 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* ✅ اللوجو - عدّل هذا */
+    .logo {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: white;
+      padding: 5px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      object-fit: contain;
+      /* احذف position: absolute */
+    }
+    
+    header h1 {
+      margin: 15px 0 10px 0;
+      font-size: 2.2em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      /* احذف padding-right */
+    }
+    
     /* ✅ تحسين الهيدر مع اللوجو */
     header {
       background: linear-gradient(135deg, #e91e63 0%, #d81b60 100%);
@@ -620,22 +694,21 @@
 </head>
 <body>
 
- <!-- Header -->
-  <div class="header">
-    <!-- اللوقو + الاسم -->
-    <div class="logo-header">
-      <img src="https://i.postimg.cc/htndYY7v/Chat-GPT-Image-14-fbrayr-2026-11-30-09-s.png" 
-           alt="تأجير طاولات وكراسي"
-           class="logo">
-      <div class="logo-text">
-        <span class="brand-name">تأجير طاولات وكراسي</span>
-        <span class="brand-subtitle">لمسات</span>
-      </div>
+<header>
+  <div class="logo-header">
+    <img src="https://i.postimg.cc/htndYY7v/Chat-GPT-Image-14-fbrayr-2026-11-30-09-s.png" 
+         alt="تأجير طاولات وكراسي"
+         class="logo">
+    <div class="logo-text">
+      <span class="brand-name">تأجير طاولات وكراسي</span>
+      <span class="brand-subtitle">لمسات</span>
     </div>
+  </div>
   
-  <h1>تأجير طاولات وكراسي | طاولات دائرية ومستطيلة وقزاز</h1>
+  <!-- ✅ العنوان الطويل لحاله بعدين -->
+  <h1>تأجير طاولات وكراسي | تأجير كراسي وطاولات للمناسبات</h1>
   <p>تأجير طاولات وكراسي ومستلزمات الحفلات في الرياض، جدة، الدمام والشرقية</p>
-
+  
   <div class="top-contact">
     <a href="tel:0559534118" class="btn-call"><i class="fas fa-phone-alt"></i> اتصل</a>
     <a href="https://wa.me/966559534118" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
