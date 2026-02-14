@@ -7,11 +7,15 @@
   <meta name="description" content="تأجير كراسي وطاولات تأجير كنب تأجير جلسات تأجير كوش تأجير طاولات استقبال، تجهيز الحفلات والمناسبات بأفضل الأسعار وجودة عالية. اتصل الآن واحصل على خدمة مميزة تشمل كافة مستلزمات الفعاليات.">
   <meta name="application-name" content="لمسات للحفلات والمناسبات">
   <link rel="canonical" href="https://www.aladyadh.com/">
-  
+
+  <!-- Favicon - اللوقو في التاب -->
+ <link rel="icon" href="https://i.postimg.cc/htndYY7v/Chat-GPT-Image-14-fbrayr-2026-11-30-09-s.png" type="image/png">
+	
   <!-- تحسين الظهور في جوجل -->
   <meta property="og:description" content="تأجير خيام تأجير مكيفات تأجير كنب تأجير كوش افراح تأجير جلسات شعبية تأجير دفايات قهوجيين وصبابين تأجير لوازم حفلات ومناسبات" />
-  <meta property="og:image" content="https://i.postimg.cc/QxMDh9df/favicon.png" />
-  
+  <meta property="og:image" content="https://i.postimg.cc/htndYY7v/Chat-GPT-Image-14-fbrayr-2026-11-30-09-s.png" />
+  <meta property="og:site_name" content="تأجير لوازم حفلات" />
+	
   <!-- وصف تعريفي للسيو -->
   <meta name="robots" content="index, follow">
 
@@ -421,6 +425,49 @@
   transform: scale(1.1);
   opacity: 1;  /* ← واضح عند hover */
 }
+  /* لوقو دائري في الهيدر */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  background: white;
+  padding: 8px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* للجوال */
+@media (max-width: 768px) {
+  .logo {
+    width: 90px;
+    height: 90px;
+    border: 3px solid white;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
     #scrollTopBtn:hover {
       background-color: #1b5e20;
       transform: scale(1.1);
@@ -495,6 +542,13 @@
 </nav>
   <!-- الهيدر -->
   <header>
+	<!-- اللوقو الدائري -->
+<div class="logo-container">
+  <img src="https://i.postimg.cc/htndYY7v/Chat-GPT-Image-14-fbrayr-2026-11-30-09-s.png" 
+       alt="تأجير لوازم حفلات - لمسات"
+       class="logo">
+</div>
+	  
     <h1>تأجير طاولات وكراسي تأجير كنب تأجير مكيفات وجلسات وشاشات ودفايات وتأجير لوازم حفلات ومناسبات</h1>
     <p class="slogan">خدمة فاخرة لكل لحظة مميزة</p>
    <!-- أزرار الاتصال والواتساب تحت العنوان -->
