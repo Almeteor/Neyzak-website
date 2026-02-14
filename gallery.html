@@ -3,159 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>معرض صور خدماتنا</title>
+    <title>معرض صور خدماتنا | لمسات للحفلات</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
     <style>
-        body {
-            font-family: 'Tajawal', Arial, sans-serif;
-            background-color: #f5f5f5;
+        * {
             margin: 0;
             padding: 0;
-            color: #333;
+            box-sizing: border-box;
         }
 
-        /* زر الرجوع للصفحة الرئيسية */
-        .back-home {
-            display: block;
-            width: 100%;
-            text-align: center;
-            background: linear-gradient(45deg, #FF5733, #C7001E);
-            color: #fff;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 30px 0;
-            font-size: 30px;
-            letter-spacing: 1.5px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        body {
+            font-family: 'Tajawal', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-attachment: fixed;
+            color: #333;
+            padding-bottom: 50px;
         }
-        .back-home:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+
+        /* الهيدر مع اللوجو */
+        header {
+            background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+            color: white;
+            padding: 20px 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* اللوجو في الزاوية اليمنى */
+        .logo {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: white;
+            padding: 5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        header h1 {
+            margin: 15px 0 10px 0;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            padding-right: 100px;
+            text-align: center;
+        }
+
+        header p {
+            text-align: center;
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-bottom: 15px;
         }
 
         /* أزرار التواصل */
         .contact-buttons {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin: 30px 0;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
         }
+
         .contact-buttons a {
             text-decoration: none;
-            width: 90px;
-            height: 90px;
+            width: 70px;
+            height: 70px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
+
         .contact-buttons a.whatsapp {
-            background-color: #25D366;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: white;
+            font-size: 35px;
         }
+
         .contact-buttons a.call {
-            background-color: #1E8449;
+            background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+            color: white;
+            font-size: 30px;
         }
-        .contact-buttons a img {
-            width: 50px;
-            height: 50px;
+
+        .contact-buttons a.back {
+            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+            color: white;
+            font-size: 30px;
         }
+
         .contact-buttons a:hover {
             transform: scale(1.1);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* زر الرجوع للصفحة الرئيسية */
+        .back-home {
+            display: block;
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: center;
+            background: linear-gradient(135deg, #e91e63 0%, #d81b60 100%);
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 20px;
+            font-size: 1.3em;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .back-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .back-home i {
+            margin-left: 10px;
         }
 
         /* قسم الأيقونات */
         .section-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
+            gap: 25px;
+            padding: 30px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .section-card {
             position: relative;
             overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
             cursor: pointer;
+            background: white;
         }
+
         .section-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
         }
+
         .section-card img {
             width: 100%;
-            height: 250px;
+            height: 280px;
             object-fit: cover;
-            border-radius: 12px;
         }
+
         .section-card .overlay {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, 0.6);
+            background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.3));
             color: #fff;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            font-size: 20px;
+            font-size: 1.2em;
             font-weight: bold;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
         }
+
         .section-card:hover .overlay {
-            background: rgba(0, 0, 0, 0.8);
+            background: linear-gradient(to top, rgba(233,30,99,0.95), rgba(233,30,99,0.6));
+            padding: 25px;
         }
 
         /* معرض الصور */
         .gallery {
             display: none;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-            padding: 20px;
+            padding: 30px 20px;
             max-width: 1200px;
             margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
         }
+
         .gallery.active {
+            display: block;
+        }
+
+        .gallery h2 {
+            color: #e91e63;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+            padding-bottom: 15px;
+            border-bottom: 4px solid #e91e63;
+        }
+
+        .gallery-grid {
             display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
         }
-        .gallery img {
+
+        .gallery-grid img {
             width: 100%;
-            height: 250px;
+            height: 280px;
             object-fit: cover;
-            border-radius: 12px;
+            border-radius: 15px;
             cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+
+        .gallery-grid img:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 12px 35px rgba(233,30,99,0.3);
         }
 
         /* زر إغلاق المعرض */
         .close-gallery {
             display: none;
             text-align: center;
-            margin: 20px auto;
-            padding: 15px 30px;
-            background-color: #FF5733;
+            margin: 30px auto;
+            padding: 18px 40px;
+            background: linear-gradient(135deg, #e91e63 0%, #d81b60 100%);
             color: #fff;
-            font-size: 20px;
+            font-size: 1.2em;
             font-weight: bold;
             text-decoration: none;
-            border-radius: 8px;
-            transition: background 0.3s;
-            max-width: 200px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            max-width: 300px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
+
         .close-gallery:hover {
-            background-color: #C7001E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
+
         .close-gallery.active {
             display: block;
+        }
+
+        .close-gallery i {
+            margin-left: 10px;
         }
 
         /* Lightbox */
@@ -167,216 +274,410 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0, 0, 0, 0.95);
             align-items: center;
             justify-content: center;
         }
+
         .lightbox-content {
             max-width: 90%;
-            max-height: 80%;
-            border-radius: 10px;
-            border: 2px solid #fff;
+            max-height: 90%;
+            border-radius: 15px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.5);
         }
+
         .close {
             position: absolute;
-            top: 20px;
-            right: 30px;
+            top: 30px;
+            right: 40px;
             color: #fff;
-            font-size: 40px;
+            font-size: 50px;
             font-weight: bold;
             cursor: pointer;
-            transition: color 0.3s;
+            transition: all 0.3s ease;
+            background: rgba(233,30,99,0.8);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
         .close:hover {
-            color: #FF5733;
+            background: #e91e63;
+            transform: rotate(90deg);
+        }
+
+        /* زر الرجوع لأعلى الصفحة */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #e91e63 0%, #d81b60 100%);
+            color: white;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 100;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        .scroll-to-top.show {
+            display: flex;
+        }
+
+        /* تحسينات للموبايل */
+        @media(max-width: 768px) {
+            .logo {
+                width: 60px;
+                height: 60px;
+                top: 10px;
+                right: 10px;
+            }
+
+            header h1 {
+                font-size: 1.4em;
+                padding-right: 75px;
+            }
+
+            header p {
+                font-size: 0.95em;
+            }
+
+            .contact-buttons a {
+                width: 60px;
+                height: 60px;
+                font-size: 25px;
+            }
+
+            .section-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+                padding: 20px 15px;
+            }
+
+            .section-card img {
+                height: 220px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+            }
+
+            .gallery-grid img {
+                height: 220px;
+            }
+
+            .back-home {
+                font-size: 1.1em;
+                padding: 15px;
+            }
+
+            .scroll-to-top {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                left: 20px;
+                font-size: 20px;
+            }
+
+            .close {
+                top: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 40px;
+            }
+        }
+
+        @media(max-width: 480px) {
+            .logo {
+                width: 50px;
+                height: 50px;
+            }
+
+            header h1 {
+                font-size: 1.2em;
+                padding-right: 60px;
+            }
+
+            .section-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- زر الرجوع أول الصفحة -->
-    <a href="index.html" class="back-home">الرجوع للصفحة الرئيسية</a>
+    <!-- الهيدر -->
+    <header>
+        <!-- اللوجو -->
+        <div class="logo">
+            <img src="https://i.postimg.cc/htndYY7v/Chat-GPT-Image-14-fbrayr-2026-11-30-09-s.png" alt="لمسات للحفلات - لوجو" />
+        </div>
 
-    <!-- أزرار التواصل -->
-    <div class="contact-buttons">
-        <a href="https://wa.me/966559534118" target="_blank" class="whatsapp">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="واتساب">
-        </a>
-       <a href="tel:0559534118" class="call">
-        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="اتصال">
+        <h1>معرض صور خدماتنا</h1>
+        <p>استعرض أفضل أعمالنا في تنظيم الحفلات والمناسبات</p>
+
+        <!-- أزرار التواصل -->
+        <div class="contact-buttons">
+            <a href="tel:0559534118" class="call" title="اتصل بنا">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+            <a href="https://wa.me/966559534118" target="_blank" class="whatsapp" title="واتساب">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="index.html" class="back" title="الرئيسية">
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- زر الرجوع للصفحة الرئيسية -->
+    <a href="index.html" class="back-home">
+        <i class="fas fa-arrow-right"></i>
+        الرجوع للصفحة الرئيسية
     </a>
-    </div>
 
     <!-- أيقونات الأقسام -->
     <div class="section-gallery">
         <div class="section-card" data-section="kosh">
             <img src="https://i.postimg.cc/d0QfxH0t/IMG-3066.jpg" alt="الكوش">
-            <div class="overlay">صور الكوش ومداخل الاستقبال وطاولات الكوكتيل</div>
+            <div class="overlay">
+                <i class="fas fa-crown" style="margin-left: 10px;"></i>
+                الكوش ومداخل الاستقبال
+            </div>
         </div>
+        
         <div class="section-card" data-section="sofas">
             <img src="https://i.postimg.cc/GhZqwXNx/IMG-3055.jpg" alt="الكنب">
-            <div class="overlay">صور الكنب مفرد وثلاثي</div>
+            <div class="overlay">
+                <i class="fas fa-couch" style="margin-left: 10px;"></i>
+                الكنب مفرد وثلاثي
+            </div>
         </div>
+        
         <div class="section-card" data-section="tables">
             <img src="https://i.postimg.cc/pdPrmt4V/c40bae99-ae66-4d61-848a-776846e53140.jpg" alt="الطاولات">
-            <div class="overlay">صور طاولات وكراسي</div>
+            <div class="overlay">
+                <i class="fas fa-table" style="margin-left: 10px;"></i>
+                طاولات وكراسي
+            </div>
         </div>
+        
         <div class="section-card" data-section="hospitality">
             <img src="https://i.postimg.cc/bwsHS41W/4ae02baf-1b7f-4006-b2bf-e0b3a9081e27.jpg" alt="ركن الضيافة">
-            <div class="overlay">صور الضيافه</div>
+            <div class="overlay">
+                <i class="fas fa-coffee" style="margin-left: 10px;"></i>
+                ركن الضيافة
+            </div>
         </div>
+        
         <div class="section-card" data-section="seating">
             <img src="https://i.postimg.cc/HkY15sYN/IMG-3033.jpg" alt="الجلسات">
-            <div class="overlay">صور جلسات شعبية ومغربية</div>
+            <div class="overlay">
+                <i class="fas fa-chair" style="margin-left: 10px;"></i>
+                جلسات شعبية ومغربية
+            </div>
         </div>
+        
         <div class="section-card" data-section="tents">
             <img src="https://i.postimg.cc/yxRkRRDr/IMG-3096.jpg" alt="الخيام">
-            <div class="overlay">صور خيام</div>
+            <div class="overlay">
+                <i class="fas fa-campground" style="margin-left: 10px;"></i>
+                الخيام
+            </div>
         </div>
+        
         <div class="section-card" data-section="barriers">
-            <img src="https://i.postimg.cc/s2PmYBhx/IMG-3089.jpg" alt="الحواجز">
-            <div class="overlay">صور حواجز وممرات وليزرات وشاشات ومسارح</div>
+            <img src="https://i.postimg.cc/mrn51tLG/IMG-4136.jpg" alt="الحواجز">
+            <div class="overlay">
+                <i class="fas fa-tv" style="margin-left: 10px;"></i>
+                حواجز وشاشات ومسارح
+            </div>
         </div>
     </div>
 
-    <!-- زر رجوع لقسم الصور -->
-    <a href="#" class="close-gallery">رجوع لقسم الصور</a>
+    <!-- زر إغلاق المعرض -->
+    <a href="#" class="close-gallery">
+        <i class="fas fa-arrow-right"></i>
+        رجوع لقسم الصور
+    </a>
 
-    <!-- قسم صور كوش الأفراح ومداخل الاستقبال وطاولات الكوكتيل -->
+    <!-- قسم صور الكوش -->
     <div class="gallery" id="kosh">
-        <h2>صور الكوش ومداخل الاستقبال وطاولات الكوكتيل</h2>
-        <img src="https://i.postimg.cc/d0QfxH0t/IMG-3066.jpg" alt="صورة 1">
-        <img src="https://i.postimg.cc/W3hH2drB/IMG-3065.jpg" alt="صورة 2">
-        <img src="https://i.postimg.cc/C1X6dwsz/IMG-3064.jpg" alt="صورة 3">
-        <img src="https://i.postimg.cc/X7wD7SGY/IMG-3063.jpg" alt="صورة 4">
-        <img src="https://i.postimg.cc/Jzx6ZNQw/IMG-3062.jpg" alt="صورة 5">
-        <img src="https://i.postimg.cc/8CnZnT3t/IMG-3061.jpg" alt="صورة 6">
-        <img src="https://i.postimg.cc/V6xDmDzt/IMG-3060.jpg" alt="صورة 7">
-        <img src="https://i.postimg.cc/7YMmr3dC/IMG-3059.jpg" alt="صورة 8">
-        <img src="https://i.postimg.cc/QMVb7Rt5/IMG-3058.jpg" alt="صورة 9">
-        <img src="https://i.postimg.cc/26hnFmfq/IMG-3057.jpg" alt="صورة 10">
-        <img src="https://i.postimg.cc/QdC5Yc3Z/IMG-3056.jpg" alt="صورة 11">
-        <img src="https://i.postimg.cc/zG4LdM7T/IMG-3054.jpg" alt="صورة 12">
-        <img src="https://i.postimg.cc/GmTtsKRt/IMG-3053.jpg" alt="صورة 13">
-        <img src="https://i.postimg.cc/QtmdrnQ4/4a27d74f-220e-44c6-83d7-2db0c9cd68fb.jpg" alt="صورة 14">
-        <img src="https://i.postimg.cc/wxWjfZT3/9fdfe423-0790-45f1-a1dd-d1615a263dce.jpg" alt="صورة 15">
-        <img src="https://i.postimg.cc/nLtF9tTS/0534cf82-062e-4f1f-b241-daeb0fa55446.jpg" alt="صورة 16">
-        <img src="https://i.postimg.cc/WbBjxvRp/IMG-3036.jpg" alt="صورة 17">
-        <img src="https://i.postimg.cc/j53YcVQb/317290a2-f4df-429e-999f-296e37928082.jpg" alt="صورة 18">
-        <img src="https://i.postimg.cc/x1VDt3Hc/97aab430-e8d0-48bc-8d60-fd02d23ac75d.jpg" alt="صورة 19">
-        <img src="https://i.postimg.cc/K80Rn39d/IMG-3067.webp" alt="صورة 20">
+        <h2><i class="fas fa-crown" style="margin-left: 10px;"></i> الكوش ومداخل الاستقبال وطاولات الكوكتيل</h2>
+        <div class="gallery-grid">
+            <img src="https://i.postimg.cc/d0QfxH0t/IMG-3066.jpg" alt="كوش 1">
+            <img src="https://i.postimg.cc/W3hH2drB/IMG-3065.jpg" alt="كوش 2">
+            <img src="https://i.postimg.cc/C1X6dwsz/IMG-3064.jpg" alt="كوش 3">
+            <img src="https://i.postimg.cc/X7wD7SGY/IMG-3063.jpg" alt="كوش 4">
+            <img src="https://i.postimg.cc/Jzx6ZNQw/IMG-3062.jpg" alt="كوش 5">
+            <img src="https://i.postimg.cc/8CnZnT3t/IMG-3061.jpg" alt="كوش 6">
+            <img src="https://i.postimg.cc/V6xDmDzt/IMG-3060.jpg" alt="كوش 7">
+            <img src="https://i.postimg.cc/7YMmr3dC/IMG-3059.jpg" alt="كوش 8">
+            <img src="https://i.postimg.cc/QMVb7Rt5/IMG-3058.jpg" alt="كوش 9">
+            <img src="https://i.postimg.cc/26hnFmfq/IMG-3057.jpg" alt="كوش 10">
+            <img src="https://i.postimg.cc/QdC5Yc3Z/IMG-3056.jpg" alt="كوش 11">
+            <img src="https://i.postimg.cc/zG4LdM7T/IMG-3054.jpg" alt="كوش 12">
+            <img src="https://i.postimg.cc/GmTtsKRt/IMG-3053.jpg" alt="كوش 13">
+            <img src="https://i.postimg.cc/QtmdrnQ4/4a27d74f-220e-44c6-83d7-2db0c9cd68fb.jpg" alt="كوش 14">
+            <img src="https://i.postimg.cc/wxWjfZT3/9fdfe423-0790-45f1-a1dd-d1615a263dce.jpg" alt="كوش 15">
+            <img src="https://i.postimg.cc/nLtF9tTS/0534cf82-062e-4f1f-b241-daeb0fa55446.jpg" alt="كوش 16">
+            <img src="https://i.postimg.cc/WbBjxvRp/IMG-3036.jpg" alt="كوش 17">
+            <img src="https://i.postimg.cc/j53YcVQb/317290a2-f4df-429e-999f-296e37928082.jpg" alt="كوش 18">
+            <img src="https://i.postimg.cc/x1VDt3Hc/97aab430-e8d0-48bc-8d60-fd02d23ac75d.jpg" alt="كوش 19">
+            <img src="https://i.postimg.cc/K80Rn39d/IMG-3067.webp" alt="كوش 20">
+        </div>
     </div>
 
     <!-- قسم صور الكنب -->
     <div class="gallery" id="sofas">
-        <h2>صور كنب مفرد وثلاثي</h2>
-        <img src="https://i.postimg.cc/GhZqwXNx/IMG-3055.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/zGr2HdjX/IMG-3037.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/0y0WYpWG/be683716-ad38-47dc-a0a0-dc8da79cbb92.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/BvhmyJGX/d02ebdeb-1571-4254-a4cf-38106b7d04af.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/d1L5cgqn/ffbb2ee4-bcf7-4d34-8aac-61c450160fda.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/BbFNXDPK/IMG-2899.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/VNxCbRXy/1c380e19-4411-4524-8d81-0742c99fb321.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/cJwJPN8N/956bb507-74e7-41c7-bcb5-84e04f4612ae.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/gjkSfmjg/1032d6c3-2ab1-451d-b8de-b01b26d54c8e.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/wjsfKWqV/ea1e40bc-338b-4289-8073-b19f30e1c3b3.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/Fz8yD4LH/b073157a-9250-45be-89b7-871f1a3fd816.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/PfvS3GV5/a26517a4-ff51-482d-86ad-b44b2bff05d6.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/sDpwzYrF/821f3cb9-f352-41e5-9337-4f99ed3fa11d.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/K8xQ81G1/ddc4ae75-fef8-4897-b7eb-a5b45bf24174.jpg" alt="صورة">
+        <h2><i class="fas fa-couch" style="margin-left: 10px;"></i> كنب مفرد وثلاثي</h2>
+        <div class="gallery-grid">
+            <img src="https://i.postimg.cc/GhZqwXNx/IMG-3055.jpg" alt="كنب 1">
+            <img src="https://i.postimg.cc/zGr2HdjX/IMG-3037.jpg" alt="كنب 2">
+            <img src="https://i.postimg.cc/0y0WYpWG/be683716-ad38-47dc-a0a0-dc8da79cbb92.jpg" alt="كنب 3">
+            <img src="https://i.postimg.cc/BvhmyJGX/d02ebdeb-1571-4254-a4cf-38106b7d04af.jpg" alt="كنب 4">
+            <img src="https://i.postimg.cc/d1L5cgqn/ffbb2ee4-bcf7-4d34-8aac-61c450160fda.jpg" alt="كنب 5">
+            <img src="https://i.postimg.cc/BbFNXDPK/IMG-2899.jpg" alt="كنب 6">
+            <img src="https://i.postimg.cc/VNxCbRXy/1c380e19-4411-4524-8d81-0742c99fb321.jpg" alt="كنب 7">
+            <img src="https://i.postimg.cc/cJwJPN8N/956bb507-74e7-41c7-bcb5-84e04f4612ae.jpg" alt="كنب 8">
+            <img src="https://i.postimg.cc/gjkSfmjg/1032d6c3-2ab1-451d-b8de-b01b26d54c8e.jpg" alt="كنب 9">
+            <img src="https://i.postimg.cc/wjsfKWqV/ea1e40bc-338b-4289-8073-b19f30e1c3b3.jpg" alt="كنب 10">
+            <img src="https://i.postimg.cc/Fz8yD4LH/b073157a-9250-45be-89b7-871f1a3fd816.jpg" alt="كنب 11">
+            <img src="https://i.postimg.cc/PfvS3GV5/a26517a4-ff51-482d-86ad-b44b2bff05d6.jpg" alt="كنب 12">
+            <img src="https://i.postimg.cc/sDpwzYrF/821f3cb9-f352-41e5-9337-4f99ed3fa11d.jpg" alt="كنب 13">
+            <img src="https://i.postimg.cc/K8xQ81G1/ddc4ae75-fef8-4897-b7eb-a5b45bf24174.jpg" alt="كنب 14">
+        </div>
     </div>
 
-    <!-- قسم صور طاولات وكراسي -->
+    <!-- قسم صور الطاولات -->
     <div class="gallery" id="tables">
-        <h2>صور طاولات وكراسي</h2>
-        <img src="https://i.postimg.cc/HxWfXf5R/99be48bb-b95b-4b29-80d6-523693ca7a7a.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/y6D7GZgc/d0444da4-f9c8-4f9a-928f-88a830eb058a.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/mDtWKvDs/b4539c14-f572-473c-9a55-0704560e9a9e.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/pdPrmt4V/c40bae99-ae66-4d61-848a-776846e53140.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/cCf6K4xH/IMG-3035.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/28FVr699/a89f7420-69cb-475c-a69c-3da37e1bbdb0.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/y81WdHw1/74fc88ae-41e0-476e-be69-30de4f6abfd0.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/pd7dqnyr/037dd894-19c1-4ed4-966a-c024bc028161.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/0jG2kWnK/fa5304c5-fee2-4598-a750-0ea4744beb7c.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/Ghrm7R3F/f220e5fd-8d29-48c9-872a-d261570c7071.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/VkZskbqg/de6b4ccb-4a17-45fd-953a-78c1295ceb39.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/k5knx3ht/6913c560-a82f-46f5-b353-a7818a70ee27.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/fTThSRTr/08f0a50f-9556-47d8-b44b-6a3ab8e95162.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/pX71VW98/e1a0b5a2-be23-4060-b6c5-75e0e1b5dd06.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/YCWDh5gP/3c402028-4303-4282-928a-802c8d63c5eb.jpg" alt="صورة">
+        <h2><i class="fas fa-table" style="margin-left: 10px;"></i> طاولات وكراسي</h2>
+        <div class="gallery-grid">
+            <img src="https://i.postimg.cc/HxWfXf5R/99be48bb-b95b-4b29-80d6-523693ca7a7a.jpg" alt="طاولات 1">
+            <img src="https://i.postimg.cc/y6D7GZgc/d0444da4-f9c8-4f9a-928f-88a830eb058a.jpg" alt="طاولات 2">
+            <img src="https://i.postimg.cc/mDtWKvDs/b4539c14-f572-473c-9a55-0704560e9a9e.jpg" alt="طاولات 3">
+            <img src="https://i.postimg.cc/pdPrmt4V/c40bae99-ae66-4d61-848a-776846e53140.jpg" alt="طاولات 4">
+            <img src="https://i.postimg.cc/cCf6K4xH/IMG-3035.jpg" alt="طاولات 5">
+            <img src="https://i.postimg.cc/28FVr699/a89f7420-69cb-475c-a69c-3da37e1bbdb0.jpg" alt="طاولات 6">
+            <img src="https://i.postimg.cc/y81WdHw1/74fc88ae-41e0-476e-be69-30de4f6abfd0.jpg" alt="طاولات 7">
+            <img src="https://i.postimg.cc/pd7dqnyr/037dd894-19c1-4ed4-966a-c024bc028161.jpg" alt="طاولات 8">
+            <img src="https://i.postimg.cc/0jG2kWnK/fa5304c5-fee2-4598-a750-0ea4744beb7c.jpg" alt="طاولات 9">
+            <img src="https://i.postimg.cc/Ghrm7R3F/f220e5fd-8d29-48c9-872a-d261570c7071.jpg" alt="طاولات 10">
+            <img src="https://i.postimg.cc/VkZskbqg/de6b4ccb-4a17-45fd-953a-78c1295ceb39.jpg" alt="طاولات 11">
+            <img src="https://i.postimg.cc/k5knx3ht/6913c560-a82f-46f5-b353-a7818a70ee27.jpg" alt="طاولات 12">
+            <img src="https://i.postimg.cc/fTThSRTr/08f0a50f-9556-47d8-b44b-6a3ab8e95162.jpg" alt="طاولات 13">
+            <img src="https://i.postimg.cc/pX71VW98/e1a0b5a2-be23-4060-b6c5-75e0e1b5dd06.jpg" alt="طاولات 14">
+            <img src="https://i.postimg.cc/YCWDh5gP/3c402028-4303-4282-928a-802c8d63c5eb.jpg" alt="طاولات 15">
+        </div>
     </div>
 
-    <!-- قسم صور ركن الضيافة -->
+    <!-- قسم صور الضيافة -->
     <div class="gallery" id="hospitality">
-        <h2>صور ركن الضيافة</h2>
-        <img src="https://i.postimg.cc/bwsHS41W/4ae02baf-1b7f-4006-b2bf-e0b3a9081e27.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/fLtRxj8w/241b0699-41ee-4e62-823f-4903ea8d565f.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/yNJH56cj/3da3cacf-5efb-45cf-9222-e3abcfecbde9.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/Dwr19z24/791a787b-3bb2-4bf5-99f3-95311827c167.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/R0CGGtcZ/2f3eb845-7c91-40ce-9b36-b1be48659f9e.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/3NGZWFHn/11ed623b-cd20-4563-817f-9374012fd4f3.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/ZKrcSHHq/964be32c-3263-4c01-ae68-8d8ed4c6522c.jpg" alt="صورة">
+        <h2><i class="fas fa-coffee" style="margin-left: 10px;"></i> ركن الضيافة</h2>
+        <div class="gallery-grid">
+            <img src="https://i.postimg.cc/bwsHS41W/4ae02baf-1b7f-4006-b2bf-e0b3a9081e27.jpg" alt="ضيافة 1">
+            <img src="https://i.postimg.cc/fLtRxj8w/241b0699-41ee-4e62-823f-4903ea8d565f.jpg" alt="ضيافة 2">
+            <img src="https://i.postimg.cc/yNJH56cj/3da3cacf-5efb-45cf-9222-e3abcfecbde9.jpg" alt="ضيافة 3">
+            <img src="https://i.postimg.cc/Dwr19z24/791a787b-3bb2-4bf5-99f3-95311827c167.jpg" alt="ضيافة 4">
+            <img src="https://i.postimg.cc/R0CGGtcZ/2f3eb845-7c91-40ce-9b36-b1be48659f9e.jpg" alt="ضيافة 5">
+            <img src="https://i.postimg.cc/3NGZWFHn/11ed623b-cd20-4563-817f-9374012fd4f3.jpg" alt="ضيافة 6">
+            <img src="https://i.postimg.cc/ZKrcSHHq/964be32c-3263-4c01-ae68-8d8ed4c6522c.jpg" alt="ضيافة 7">
+        </div>
     </div>
 
     <!-- قسم صور الجلسات -->
     <div class="gallery" id="seating">
-        <h2>صور جلسات شعبية ومغربية</h2>
-        <img src="https://i.postimg.cc/HkY15sYN/IMG-3033.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/2jhsKB3J/60f2dedd-5c0b-4266-8952-2b59a1af5413.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/RVTjM57L/IMG-3034.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/MpPNQ7rc/91cfa35a-fc3b-4a3e-bef3-a0c4ea3eef9c.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/ZqWgFW1w/4cc93a4e-f758-438c-a304-6fb631e6abd7.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/7LjRBx4w/ceefc928-410c-4eb8-a618-1e389bfc759d.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/qqT5TjgF/9ba4cf80-fdd9-4fad-9598-43ec5083b528.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/v8rKzFNw/5a236267-8b38-4648-985c-e18afd4690a5.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/WbsHYWBF/IMG-2900.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/x1CFnkT9/7789137a-1059-428e-bbac-5d2656e86e39.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/T34NwRpg/49c03e62-1054-4cad-8ea6-7fb48acfaa7f.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/vTb3jTNF/86cbdc69-021d-4387-bcb4-7b1d3367bd8f.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/QNJ67gFX/ff82e887-7bfc-412a-8f00-ba8ac8af9e39.jpg" alt="صورة">
+        <h2><i class="fas fa-chair" style="margin-left: 10px;"></i> جلسات شعبية ومغربية</h2>
+        <div class="gallery-grid">
+            <img src="https://i.postimg.cc/HkY15sYN/IMG-3033.jpg" alt="جلسات 1">
+            <img src="https://i.postimg.cc/2jhsKB3J/60f2dedd-5c0b-4266-8952-2b59a1af5413.jpg" alt="جلسات 2">
+            <img src="https://i.postimg.cc/RVTjM57L/IMG-3034.jpg" alt="جلسات 3">
+            <img src="https://i.postimg.cc/MpPNQ7rc/91cfa35a-fc3b-4a3e-bef3-a0c4ea3eef9c.jpg" alt="جلسات 4">
+            <img src="https://i.postimg.cc/ZqWgFW1w/4cc93a4e-f758-438c-a304-6fb631e6abd7.jpg" alt="جلسات 5">
+            <img src="https://i.postimg.cc/7LjRBx4w/ceefc928-410c-4eb8-a618-1e389bfc759d.jpg" alt="جلسات 6">
+            <img src="https://i.postimg.cc/qqT5TjgF/9ba4cf80-fdd9-4fad-9598-43ec5083b528.jpg" alt="جلسات 7">
+            <img src="https://i.postimg.cc/v8rKzFNw/5a236267-8b38-4648-985c-e18afd4690a5.jpg" alt="جلسات 8">
+            <img src="https://i.postimg.cc/WbsHYWBF/IMG-2900.jpg" alt="جلسات 9">
+            <img src="https://i.postimg.cc/x1CFnkT9/7789137a-1059-428e-bbac-5d2656e86e39.jpg" alt="جلسات 10">
+            <img src="https://i.postimg.cc/T34NwRpg/49c03e62-1054-4cad-8ea6-7fb48acfaa7f.jpg" alt="جلسات 11">
+            <img src="https://i.postimg.cc/vTb3jTNF/86cbdc69-021d-4387-bcb4-7b1d3367bd8f.jpg" alt="جلسات 12">
+            <img src="https://i.postimg.cc/QNJ67gFX/ff82e887-7bfc-412a-8f00-ba8ac8af9e39.jpg" alt="جلسات 13">
+        </div>
     </div>
 
     <!-- قسم صور الخيام -->
     <div class="gallery" id="tents">
-        <h2>صور خيام</h2>
-        <img src="https://i.postimg.cc/yxRkRRDr/IMG-3096.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/8CCcH9Fv/IMG-3095.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/g0BJBsRT/IMG-3094.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/wB3xJNPc/IMG-3093.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/PxwtVjdC/IMG-3092.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/Bb5JsBLs/IMG-3091.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/ydz5B4Fg/f475dd2b-59f4-4d79-9c94-7f6d3a6e85cf.jpg" alt="صورة">
+        <h2><i class="fas fa-campground" style="margin-left: 10px;"></i> الخيام</h2>
+        <div class="gallery-grid">
+            <img src="https://i.postimg.cc/yxRkRRDr/IMG-3096.jpg" alt="خيام 1">
+            <img src="https://i.postimg.cc/8CCcH9Fv/IMG-3095.jpg" alt="خيام 2">
+            <img src="https://i.postimg.cc/g0BJBsRT/IMG-3094.jpg" alt="خيام 3">
+            <img src="https://i.postimg.cc/wB3xJNPc/IMG-3093.jpg" alt="خيام 4">
+            <img src="https://i.postimg.cc/PxwtVjdC/IMG-3092.jpg" alt="خيام 5">
+            <img src="https://i.postimg.cc/Bb5JsBLs/IMG-3091.jpg" alt="خيام 6">
+            <img src="https://i.postimg.cc/ydz5B4Fg/f475dd2b-59f4-4d79-9c94-7f6d3a6e85cf.jpg" alt="خيام 7">
+        </div>
     </div>
 
-    <!-- قسم صور الحواجز والممرات والليزرات والشاشات وشاشات العرض والمسارح -->
+    <!-- قسم صور الحواجز والشاشات -->
     <div class="gallery" id="barriers">
-        <h2>صور حواجز وممرات وليزرات وشاشات ومسارح</h2>
-        <img src="https://i.postimg.cc/mrn51tLG/IMG-4136.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/KjDffz27/IMG-4133.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/jSL6wvLN/74f41672-f94e-4859-88c8-8675caf8fd07.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/0N5nCkdC/IMG-3088.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/Vvtd8SB4/IMG-3363.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/gk9xKDm7/IMG-3362.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/MGGHG3mn/IMG-3361.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/k55Nbjq1/IMG-3087.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/jdrzXqRJ/IMG-3086.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/yxTWnHTF/IMG-3085.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/nc0CDnrx/IMG-3084.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/g27jg43B/IMG-3083.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/mDfDsDXY/IMG-3082.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/1Xy38dZ4/IMG-3080.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/c49LJTk4/IMG-3078.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/6QRWYKWy/IMG-3077.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/rsyqVtSr/a11b82c2-599f-4fde-842e-368bff38beb2.jpg" alt="صورة">
-        <img src="https://i.postimg.cc/zDpJd0rS/4db8dba2-e42a-4a76-b127-65e1f8a11e82.jpg" alt="صورة">
+        <h2><i class="fas fa-tv" style="margin-left: 10px;"></i> حواجز وممرات وشاشات ومسارح</h2>
+        <div class="gallery-grid">
+            <img src="https://i.postimg.cc/mrn51tLG/IMG-4136.jpg" alt="حواجز 1">
+            <img src="https://i.postimg.cc/KjDffz27/IMG-4133.jpg" alt="حواجز 2">
+            <img src="https://i.postimg.cc/jSL6wvLN/74f41672-f94e-4859-88c8-8675caf8fd07.jpg" alt="حواجز 3">
+            <img src="https://i.postimg.cc/0N5nCkdC/IMG-3088.jpg" alt="حواجز 4">
+            <img src="https://i.postimg.cc/Vvtd8SB4/IMG-3363.jpg" alt="حواجز 5">
+            <img src="https://i.postimg.cc/gk9xKDm7/IMG-3362.jpg" alt="حواجز 6">
+            <img src="https://i.postimg.cc/MGGHG3mn/IMG-3361.jpg" alt="حواجز 7">
+            <img src="https://i.postimg.cc/k55Nbjq1/IMG-3087.jpg" alt="حواجز 8">
+            <img src="https://i.postimg.cc/jdrzXqRJ/IMG-3086.jpg" alt="حواجز 9">
+            <img src="https://i.postimg.cc/yxTWnHTF/IMG-3085.jpg" alt="حواجز 10">
+            <img src="https://i.postimg.cc/nc0CDnrx/IMG-3084.jpg" alt="حواجز 11">
+            <img src="https://i.postimg.cc/g27jg43B/IMG-3083.jpg" alt="حواجز 12">
+            <img src="https://i.postimg.cc/mDfDsDXY/IMG-3082.jpg" alt="حواجز 13">
+            <img src="https://i.postimg.cc/1Xy38dZ4/IMG-3080.jpg" alt="حواجز 14">
+            <img src="https://i.postimg.cc/c49LJTk4/IMG-3078.jpg" alt="حواجز 15">
+            <img src="https://i.postimg.cc/6QRWYKWy/IMG-3077.jpg" alt="حواجز 16">
+            <img src="https://i.postimg.cc/rsyqVtSr/a11b82c2-599f-4fde-842e-368bff38beb2.jpg" alt="حواجز 17">
+            <img src="https://i.postimg.cc/zDpJd0rS/4db8dba2-e42a-4a76-b127-65e1f8a11e82.jpg" alt="حواجز 18">
+        </div>
     </div>
 
     <!-- زر الرجوع نهاية الصفحة -->
-    <a href="index.html" class="back-home">الرجوع للصفحة الرئيسية</a>
+    <a href="index.html" class="back-home">
+        <i class="fas fa-arrow-right"></i>
+        الرجوع للصفحة الرئيسية
+    </a>
 
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
         <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+        <img class="lightbox-content" id="lightbox-img" alt="صورة مكبرة">
+    </div>
+
+    <!-- زر الرجوع لأعلى الصفحة -->
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
     </div>
 
     <script>
@@ -387,6 +688,7 @@
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const closeLightbox = document.querySelector('.close');
+        const scrollToTop = document.querySelector('.scroll-to-top');
 
         // عرض معرض القسم عند الضغط على الأيقونة
         sectionCards.forEach(card => {
@@ -396,6 +698,7 @@
                 document.getElementById(section).classList.add('active');
                 sectionGallery.style.display = 'none';
                 closeGallery.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
 
@@ -405,11 +708,13 @@
             galleries.forEach(gallery => gallery.classList.remove('active'));
             sectionGallery.style.display = 'grid';
             closeGallery.classList.remove('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         // Lightbox لعرض الصور
         galleries.forEach(gallery => {
-            gallery.querySelectorAll('img').forEach(img => {
+            const images = gallery.querySelectorAll('.gallery-grid img');
+            images.forEach(img => {
                 img.addEventListener('click', () => {
                     lightbox.style.display = 'flex';
                     lightboxImg.src = img.src;
@@ -422,7 +727,27 @@
         });
 
         lightbox.addEventListener('click', e => {
-            if (e.target !== lightboxImg) lightbox.style.display = 'none';
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        // زر الرجوع لأعلى الصفحة
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTop.classList.add('show');
+            } else {
+                scrollToTop.classList.remove('show');
+            }
+        });
+
+        scrollToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // منع النقر على الماوس الأيمن على الصور
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('contextmenu', e => e.preventDefault());
         });
     </script>
 </body>
