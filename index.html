@@ -27,7 +27,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "لمسة لتأجير مستلزمات الحفلات",
+ "name": "تأجير لوازم حفلات",
+"alternateName": "لمسة",
   "url": "https://www.aladyadh.com",
   "logo": "https://www.aladyadh.com/logo.png",
   "contactPoint": {
@@ -425,47 +426,89 @@
   transform: scale(1.1);
   opacity: 1;  /* ← واضح عند hover */
 }
-  /* لوقو دائري في الهيدر */
-.logo-container {
+/* اللوقو + الاسم في اليمين */
+.logo-header {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
   margin-bottom: 20px;
-  animation: fadeIn 1s ease-in;
+  padding-right: 20px;
+  animation: slideInRight 0.8s ease-out;
 }
 
 .logo {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid white;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  border: 4px solid white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   background: white;
-  padding: 8px;
+  padding: 5px;
   transition: transform 0.3s ease;
 }
 
 .logo:hover {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.05) rotate(3deg);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.brand-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  line-height: 1.2;
+}
+
+.brand-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.9);
+  margin-top: 5px;
 }
 
 /* للجوال */
 @media (max-width: 768px) {
+  .logo-header {
+    justify-content: center;
+    padding-right: 0;
+  }
+  
   .logo {
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
     border: 3px solid white;
+  }
+  
+  .logo-text {
+    align-items: center;
+  }
+  
+  .brand-name {
+    font-size: 1.3rem;
+  }
+  
+  .brand-subtitle {
+    font-size: 1rem;
   }
 }
 
-@keyframes fadeIn {
+@keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateX(50px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
     #scrollTopBtn:hover {
@@ -542,11 +585,15 @@
 </nav>
   <!-- الهيدر -->
   <header>
-	<!-- اللوقو الدائري -->
-<div class="logo-container">
+<!-- اللوقو + الاسم في اليمين -->
+<div class="logo-header">
   <img src="https://i.postimg.cc/htndYY7v/Chat-GPT-Image-14-fbrayr-2026-11-30-09-s.png" 
-       alt="تأجير لوازم حفلات - لمسات"
+       alt="تأجير لوازم حفلات"
        class="logo">
+  <div class="logo-text">
+    <span class="brand-name">تأجير لوازم حفلات</span>
+    <span class="brand-subtitle">لمسات</span>
+  </div>
 </div>
 	  
     <h1>تأجير طاولات وكراسي تأجير كنب تأجير مكيفات وجلسات وشاشات ودفايات وتأجير لوازم حفلات ومناسبات</h1>
