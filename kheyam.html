@@ -232,6 +232,39 @@
       line-height: 1.8;
     }
 
+    .logo-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: static !important; /* مهم جداً */
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.brand-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+}
+
+.brand-subtitle {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.9);
+}
+    
     /* ✅ تحسين الهيدر مع اللوجو */
     header {
       background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
@@ -588,21 +621,20 @@
 </head>
 <body>
 
- <!-- Header -->
-  <div class="header">
-    <!-- اللوقو + الاسم -->
-    <div class="logo-header">
-      <img src="https://i.postimg.cc/htndYY7v/Chat-GPT-Image-14-fbrayr-2026-11-30-09-s.png" 
-           alt="تأجير خيام"
-           class="logo">
-      <div class="logo-text">
-        <span class="brand-name">تأجير خيام</span>
-        <span class="brand-subtitle">لمسات</span>
-      </div>
+<header>
+  <div class="logo-header">
+    <img src="https://i.postimg.cc/htndYY7v/Chat-GPT-Image-14-fbrayr-2026-11-30-09-s.png" 
+         alt="تأجير خيام"
+         class="logo">
+    <div class="logo-text">
+      <span class="brand-name">تأجير خيام</span>
+      <span class="brand-subtitle">لمسات</span>
     </div>
+  </div>
   
-  <h1>تأجير خيام | تأجير خيام اوروبية وملكية</h1>
-  <p>تأجير خيام وبيوت شعر للمناسبات - نخدم الرياض، جدة، الدمام والشرقية</p>
+  <!-- ✅ العنوان الطويل لحاله بعدين -->
+  <h1>تأجير خيام | تأجير خيام اوروبية وجميع انواع الخيام</h1>
+  <p>تأجير خيام ومستلزمات الحفلات في الرياض، جدة، الدمام والشرقية</p>
 
   <div class="top-contact">
     <a href="tel:0559534118" class="btn-call"><i class="fas fa-phone-alt"></i> اتصل</a>
