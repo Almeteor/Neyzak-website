@@ -294,6 +294,13 @@
       font-size: 16px;
       transition: all 0.3s ease;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .top-contact a i {
+      font-size: 18px;
     }
     
     .top-contact a:hover {
@@ -475,6 +482,13 @@
       font-size: 1.1em;
       transition: all 0.3s ease;
       box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .booking-buttons a i {
+      font-size: 1.2em;
     }
     
     .booking-buttons a:hover {
@@ -511,6 +525,38 @@
       color: #25d366;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    /* ✅ زر الرجوع للأعلى */
+    .scroll-to-top {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #e91e63 0%, #d81b60 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+    }
+    
+    .scroll-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .scroll-to-top:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
     }
 
     /* ✅ تحسينات للموبايل */
@@ -584,10 +630,10 @@
   <p>تأجير طاولات وكراسي ومستلزمات الحفلات في الرياض، جدة، الدمام والشرقية</p>
 
   <div class="top-contact">
-    <a href="tel:0559534118" class="btn-call">📞 اتصل الآن: 0559534118</a>
-    <a href="https://wa.me/966559534118" class="btn-whatsapp">💬 واتساب</a>
-    <a href="index.html" class="btn-back">🔙 الرجوع للرئيسية</a>
-    <a href="gallery.html" class="btn-call">🎨 معرض الصور</a> 
+    <a href="tel:0559534118" class="btn-call"><i class="fas fa-phone-alt"></i> اتصل</a>
+    <a href="https://wa.me/966559534118" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
+    <a href="index.html" class="btn-back"><i class="fas fa-arrow-right"></i> الرئيسية</a>
+    <a href="gallery.html" class="btn-call"><i class="fas fa-images"></i> المعرض</a> 
   </div>
 </header>  
 
@@ -652,8 +698,8 @@
   </ul>
 
   <div class="booking-buttons">
-    <a href="tel:0559534118">📞 احجز الآن: 0559534118</a>
-    <a href="https://wa.me/966559534118">💬 تواصل عبر واتساب</a>
+    <a href="tel:0559534118"><i class="fas fa-phone-alt"></i> احجز الآن</a>
+    <a href="https://wa.me/966559534118"><i class="fab fa-whatsapp"></i> تواصل معنا</a>
   </div>
 </section>
 
@@ -780,8 +826,8 @@
   </p>
   
   <div class="booking-buttons">
-    <a href="tel:0559534118">📞 اتصل الآن: 0559534118</a>
-    <a href="https://wa.me/966559534118">💬 واتساب للاستفسار</a>
+    <a href="tel:0559534118"><i class="fas fa-phone-alt"></i> اتصل الآن</a>
+    <a href="https://wa.me/966559534118"><i class="fab fa-whatsapp"></i> واتساب</a>
   </div>
 </section>
 
@@ -823,6 +869,33 @@
   <p>💬 واتساب: <a href="https://wa.me/966559534118">اضغط هنا</a></p>
   <p>© جميع الحقوق محفوظة لمسات للحفلات 2026</p>
 </footer>
+
+<!-- ✅ زر الرجوع للأعلى -->
+<div class="scroll-to-top" id="scrollToTop">
+  <i class="fas fa-arrow-up"></i>
+</div>
+
+<script>
+// زر الرجوع للأعلى
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+// إظهار/إخفاء الزر عند التمرير
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
+
+// الرجوع للأعلى عند النقر
+scrollToTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+</script>
 
 </body>
 </html>
