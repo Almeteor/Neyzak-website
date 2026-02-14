@@ -218,94 +218,112 @@
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
     
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      direction: rtl;
-      color: #2c3e50;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      background-attachment: fixed;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                  url('https://i.postimg.cc/W3y7TP2y/IMG-2310.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
       line-height: 1.8;
     }
 
-    /* ✅ تحسين الهيدر مع اللوجو */
-    header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 20px 15px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-      position: relative;
-      overflow: hidden;
+   /* Header */
+    .header {
+      background: linear-gradient(135deg, #8B4513 0%, #654321 100%);
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
     
-    /* ✅ اللوجو في الزاوية اليمنى */
-    .logo {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: white;
-      padding: 5px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      z-index: 10;
-    }
-    
-    .logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      border-radius: 50%;
-    }
-    
-    header h1 {
-      margin: 15px 0 10px 0;
-      font-size: 2.2em;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-      padding-right: 100px;
-    }
-    
-    header p {
-      font-size: 1.1em;
-      opacity: 0.95;
-      margin-bottom: 15px;
-    }
-
-    .top-contact {
-      margin: 20px 0;
-      text-align: center;
+    .logo-header {
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 15px;
+      margin-bottom: 20px;
+      padding-right: 20px;
+      animation: slideInRight 0.8s ease-out;
+    }
+    
+    .logo {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      background: white;
+      padding: 4px;
+      transition: transform 0.3s ease;
+    }
+    
+    .logo:hover {
+      transform: scale(1.05) rotate(3deg);
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+    }
+    
+    .brand-name {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      line-height: 1.2;
+    }
+    
+    .brand-subtitle {
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.9);
+      margin-top: 3px;
+    }
+    
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .header-description {
+      text-align: center;
+      font-size: 1.05rem;
+      max-width: 900px;
+      margin: 0 auto 20px;
+      color: rgba(255,255,255,0.95);
+    }
+    
+    /* Navigation Buttons */
+    .top-contact {
+      display: flex;
       justify-content: center;
-      gap: 12px;
+      gap: 15px;
+      margin: 20px 0;
+      flex-wrap: wrap;
     }
     
     .top-contact a {
-      padding: 14px 28px;
+      padding: 12px 28px;
       border-radius: 30px;
       color: white;
-      font-weight: bold;
+      font-weight: 600;
       text-decoration: none;
-      font-size: 16px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      font-size: 1rem;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-    }
-    
-    .top-contact a i {
-      font-size: 18px;
-    }
-    
-    .top-contact a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     }
     
     .btn-call {
@@ -614,11 +632,18 @@
 </head>
 <body>
 
-<header>
- <!-- ✅ اللوجو في الزاوية اليمنى -->
-  <div class="logo">
-    <img src="https://i.postimg.cc/htndYY7v/Chat-GPT-Image-14-fbrayr-2026-11-30-09-s.png" alt="تأجير كنب - لوجو" />
-  </div>
+ <!-- Header -->
+  <div class="header">
+    <!-- اللوقو + الاسم -->
+    <div class="logo-header">
+      <img src="https://i.postimg.cc/htndYY7v/Chat-GPT-Image-14-fbrayr-2026-11-30-09-s.png" 
+           alt="قهوجيين وصبابين"
+           class="logo">
+      <div class="logo-text">
+        <span class="brand-name">قهوجيين وصبابين</span>
+        <span class="brand-subtitle">لمسات</span>
+      </div>
+    </div>
   
   <h1>تأجير كنب | تأجير كنبات للمناسبات</h1>
   <p>تأجير الكنب ومستلزمات الحفلات في الرياض، جدة، الدمام والشرقية</p>
@@ -628,9 +653,8 @@
     <a href="https://wa.me/966559534118" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
     <a href="index.html" class="btn-back"><i class="fas fa-arrow-right"></i> الرئيسية</a>
     <a href="gallery.html" class="btn-call"><i class="fas fa-images"></i> المعرض</a> 
-  </div>
-</header>  
-
+  </div>  
+   </div>
 <section>
   <h2>تأجير كنب فاخر بتصاميم عصرية</h2>
   
