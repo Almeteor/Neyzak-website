@@ -9,32 +9,14 @@ RewriteRule ^(.*)$ https://www.aladyadh.com/$1 [R=301,L]
 # إخفاء index.html من الرابط
 RewriteCond %{THE_REQUEST} /index\.html [NC]
 RewriteRule ^(.*)index\.html$ https://www.aladyadh.com/$1 [R=301,L]
-```
 
-**د) احفظ الملف وارفعه للسيرفر**
-
----
-
-## 🔍 **الخطوة 4: اختبر الموقع**
-
-افتح هذي الروابط وشوف:
-```
-http://aladyadh.com          → يروح مباشرة لـ https://www.aladyadh.com ✅
-https://aladyadh.com         → يروح مباشرة لـ https://www.aladyadh.com ✅
-http://www.aladyadh.com      → يروح مباشرة لـ https://www.aladyadh.com ✅
-```
-
-**كلهم لازم يروحون مباشرة في خطوة وحدة!**
-
----
-
-## 🌐 **الخطوة 5: اختبر الـ Redirect أونلاين**
-
-روح هذا الموقع:
-👉 **https://httpstatus.io**
-
-1. حط الرابط: `http://aladyadh.com`
-2. اضغط **Check**
-3. لازم يطلع:
-```
-301 → https://www.aladyadh.com (في خطوة وحدة)
+# حل مشكلة كاش الصور والخطوط في فحص السرعة
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
