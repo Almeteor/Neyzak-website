@@ -20,6 +20,24 @@
       'currency': 'SAR'
   });
 </script>
+  <!-- Event snippet for انقر للاتصال conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18567081036/cnLCCOjN2LUdEMzYvJVF',
+      'value': 1.0,
+      'currency': 'SAR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
   <meta name="description" content="تأجير جلسات شعبية تأجير جلسات مغربية تأجير جلسات تأجير قعدات خارجية في الرياض وجدة والشرقية. جلسات فاخرة مع فرش ومخدات وتجهيز كامل. أسعار مناسبة وجودة عالية. اتصل الآن">
   <link rel="canonical" href="https://www.aladyadh.com/jalsat.html">
   
