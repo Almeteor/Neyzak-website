@@ -20,6 +20,24 @@
       'currency': 'SAR'
   });
 </script>
+  <!-- Event snippet for انقر للاتصال conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18567081036/cnLCCOjN2LUdEMzYvJVF',
+      'value': 1.0,
+      'currency': 'SAR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
   <!-- ✅ وصف محسّن -->
   <meta name="description" content="تأجير كنب فاخر للمناسبات والحفلات في الرياض، جدة، الدمام. كنب ملكي، كنب ثلاثي، كنب مفرد، كنب مخمل. توصيل وتركيب مجاني. أسعار منافسة تبدأ من 100 ريال. اتصل الآن 0559534118">
   
