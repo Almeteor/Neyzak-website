@@ -20,6 +20,24 @@
       'currency': 'SAR'
   });
 </script>
+  <!-- Event snippet for انقر للاتصال conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18567081036/cnLCCOjN2LUdEMzYvJVF',
+      'value': 1.0,
+      'currency': 'SAR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
   <!-- ✅ وصف محسّن -->
   <meta name="description" content="تأجير طاولات وكراسي للمناسبات والحفلات في الرياض، جدة، الدمام. طاولات دائرية، مستطيلة، قزاز، بوفية. توصيل وتركيب مجاني. أسعار منافسة تبدأ من 30 ريال. اتصل الآن 0559534118" />
   
